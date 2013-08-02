@@ -2,6 +2,41 @@
     "manifest_version": 2,
     "minimum_chrome_version": "18",
     
+    "name": "voiceover",
+    "description": "display the simple web page",
+
+    "version": "0.0.1",
+
+    "icons": {
+        "16": "img/voicecall-16.png",
+        "48": "img/voicecall-48.png",
+        "128": "img/voicecall-128.png"
+    },
+
+    "options_page": "options/options.html",
+
+    "background": { 
+        "page": "background.html" 
+    },
+    
+    "browser_action": {
+        "default_icon": {
+            "19": "img/voicecall-19.png",
+            "38": "img/icon--19@2x.png"
+        },
+        "default_title": "voiceover"
+    },
+
+    "content_scripts": [
+        { "matches": ["<all_urls>"], "js": ["content.js"] }
+    ],
+    
+    "permissions": [
+        "unlimitedStorage", "management", "contextMenus", "cookies", "tabs", "notifications", "http://*/*", "https://*/*"
+    ],
+    
+    "default_locale": "en",
+
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
     "web_accessible_resources": [
         "blank.html", "blank.js", "frames/login.html", "frames/login_content.js", "frames/login_bulk.js",
@@ -37,40 +72,5 @@
         "img/sidebar--clipping.gif", "img/sidebar--clipping@2x.gif", "img/sidebar--sprite.png",
         "img/sidebar--sprite@2x.png", "img/sidebar-speak--sprite--model.png", "img/sidebar-speak--sprite--model@2x.png",
         "img/sidebar-speak--sprite.png", "img/sidebar-speak--sprite@2x.png", "options/bulk__forSpeechDemo.js"
-    ],
-    
-    "name": "voiceover",
-    "description": "display the simple web page",
-
-    "version": "0.0.1",
-
-    "icons": {
-        "16": "img/voicecall-16.png",
-        "48": "img/voicecall-48.png",
-        "128": "img/voicecall-128.png"
-    },
-
-    "options_page": "options/options.html",
-
-    "background": { 
-        "page": "background.html" 
-    },
-    
-    "browser_action": {
-        "default_icon": {
-            "19": "img/voicecall-19.png",
-            "38": "img/icon--19@2x.png"
-        },
-        "default_title": "voiceover"
-    },
-
-    "content_scripts": [
-        { "matches": ["<all_urls>"], "js": ["content.js"] }
-    ],
-    
-    "permissions": [
-        "unlimitedStorage", "management", "contextMenus", "cookies", "tabs", "notifications", "http://*/*", "https://*/*"
-    ],
-    
-    "default_locale": "en"
+    ]
 }
