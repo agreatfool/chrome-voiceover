@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "minimum_chrome_version": "18",
+
+    "name": "voiceover",
+    "description": "show simple web pages",
+
+    "version": "0.0.1",
+
+    "icons": {
+        "16":  "img/voicecall-16.png",
+        "48":  "img/voicecall-48.png",
+        "128": "img/voicecall-128.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "19": "img/voicecall-19.png"
+        },
+        "default_title": "voiceover"
+    },
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "content_scripts": [
+        { "matches": ["<all_urls>"], "js": ["content.js"] }
+    ],
+
+    "permissions": [
+        "unlimitedStorage", "management", "contextMenus", "cookies",
+        "background", "tabs", "notifications", "http://*/*", "https://*/*"
+    ]
+}

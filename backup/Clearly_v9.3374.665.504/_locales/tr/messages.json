@@ -1,0 +1,572 @@
+{
+   "chrome_browser_action" : {
+      "message" : "Bu sayfay\u0131 Clearly'de g\u00f6r\u00fcnt\u00fcleyin."
+   },
+   "chrome_context_menu" : {
+      "message" : "Clearly"
+   },
+   "firefox_button" : {
+      "message" : "Clearly"
+   },
+   "firefox_button_tooltip" : {
+      "message" : "Bu sayfay\u0131 Clearly ile g\u00f6r\u00fcnt\u00fcleyin."
+   },
+   "firefox_context_menu" : {
+      "message" : "Clearly"
+   },
+   "firefox_menu" : {
+      "message" : "Clearly"
+   },
+   "inside__blank_error__body" : {
+      "message" : "Clearly \u015fu anda makale sayfalar\u0131 \u00fczerinde \u00e7al\u0131\u015facak \u015fekilde tasarlanm\u0131\u015ft\u0131r. Gazete makalesi veya blog g\u00f6nderisi gibi b\u00fcy\u00fck bir metin blo\u011fu i\u00e7eren her t\u00fcrl\u00fc sayfa, makale sayfas\u0131d\u0131r."
+   },
+   "inside__blank_error__heading" : {
+      "message" : "Evernote Clearly'nin kullan\u0131m\u0131yla ilgili ipu\u00e7lar\u0131"
+   },
+   "inside__evernote_clipping" : {
+      "message" : "K\u0131rp\u0131l\u0131yor..."
+   },
+   "inside__evernote_clipping_failed" : {
+      "message" : "K\u0131rpma i\u015flemi ba\u015far\u0131s\u0131z."
+   },
+   "inside__evernote_login__button_cancel__label" : {
+      "message" : "\u0130ptal"
+   },
+   "inside__evernote_login__button_do__label" : {
+      "message" : "Oturum a\u00e7"
+   },
+   "inside__evernote_login__create_account" : {
+      "message" : "Hesap olu\u015ftur"
+   },
+   "inside__evernote_login__general__error" : {
+      "message" : "Yetkilendirme ba\u015far\u0131s\u0131z."
+   },
+   "inside__evernote_login__heading" : {
+      "message" : "Evernote'a giri\u015f yap"
+   },
+   "inside__evernote_login__password__error__format" : {
+      "message" : "Parola hatal\u0131 karakterler i\u00e7eriyor. "
+   },
+   "inside__evernote_login__password__error__invalid" : {
+      "message" : "Kullan\u0131c\u0131 ad\u0131 ve parola varolan kullan\u0131c\u0131yla e\u015fle\u015fmiyor."
+   },
+   "inside__evernote_login__password__error__length" : {
+      "message" : "Parola 6 ile 64 karakter aras\u0131nda olmal\u0131d\u0131r."
+   },
+   "inside__evernote_login__password__error__required" : {
+      "message" : "Parola zorunludur."
+   },
+   "inside__evernote_login__password__error__reset" : {
+      "message" : "Parolan\u0131z\u0131n s\u00fcresi doldu. L\u00fctfen \u015fimdi s\u0131f\u0131rlay\u0131n."
+   },
+   "inside__evernote_login__password__error__timeout" : {
+      "message" : "Oturum zaman a\u015f\u0131m\u0131na u\u011frad\u0131. L\u00fctfen tekrar deneyin."
+   },
+   "inside__evernote_login__password__label" : {
+      "message" : "\u015eifre"
+   },
+   "inside__evernote_login__rememberMe__label" : {
+      "message" : "Beni hat\u0131rla"
+   },
+   "inside__evernote_login__spinner" : {
+      "message" : "Evernote'ta oturum a\u00e7\u0131l\u0131yor"
+   },
+   "inside__evernote_login__username__error__format" : {
+      "message" : "Kullan\u0131c\u0131 ad\u0131 hatal\u0131 karakterler i\u00e7eriyor. "
+   },
+   "inside__evernote_login__username__error__invalid" : {
+      "message" : "Ge\u00e7erli ve etkin olmayan kullan\u0131c\u0131."
+   },
+   "inside__evernote_login__username__error__length" : {
+      "message" : "Kullan\u0131c\u0131 ad\u0131 1 ile 64 karakter aras\u0131nda olmal\u0131d\u0131r."
+   },
+   "inside__evernote_login__username__error__required" : {
+      "message" : "Kullan\u0131c\u0131 ad\u0131 zorunludur."
+   },
+   "inside__evernote_login__username__label" : {
+      "message" : "Evernote Kullan\u0131c\u0131 Ad\u0131 veya E-posta Adresi"
+   },
+   "inside__evernote_two_factor__button_do__label" : {
+      "message" : "Devam"
+   },
+   "inside__evernote_two_factor__button_help__label" : {
+      "message" : "Onaylama kodu almak i\u00e7in yard\u0131ma ihtiyac\u0131m var"
+   },
+   "inside__evernote_two_factor__code__error__format" : {
+      "message" : "Onay kodunda yaln\u0131zca say\u0131 bulunmal\u0131d\u0131r."
+   },
+   "inside__evernote_two_factor__code__error__invalid" : {
+      "message" : "Onay kodu yanl\u0131\u015f."
+   },
+   "inside__evernote_two_factor__code__error__length" : {
+      "message" : "Onay kodu en az 6 karakter uzunlu\u011funda olmal\u0131d\u0131r."
+   },
+   "inside__evernote_two_factor__code__error__required" : {
+      "message" : "Onay kodu zorunludur."
+   },
+   "inside__evernote_two_factor__code__label" : {
+      "message" : "Alt\u0131 haneli kod"
+   },
+   "inside__evernote_two_factor__message__google" : {
+      "message" : "Google Authenticator uygulaman\u0131zda g\u00f6r\u00fcnt\u00fclenen do\u011frulama kodunu girin."
+   },
+   "inside__evernote_two_factor__message__sms" : {
+      "message" : "\u015eu numaraya onay kodu i\u00e7eren bir metin mesaj\u0131 g\u00f6nderdik"
+   },
+   "inside__features__clipping__text" : {
+      "message" : "Okuduklar\u0131n\u0131z\u0131 tek t\u0131klamayla Evernote hesab\u0131n\u0131za kaydedin. Evernote'taki k\u0131rp\u0131lan \u00f6\u011felere istedi\u011finiz cihazdan diledi\u011finiz zaman ula\u015f\u0131n."
+   },
+   "inside__features__clipping__title" : {
+      "message" : "K\u0131rp ve Evernote'a G\u00f6nder"
+   },
+   "inside__features__close2" : {
+      "message" : "Kapat"
+   },
+   "inside__features__eula_notice" : {
+      "message" : "Clearly'yi kullanarak, [=eula] \u015fartlar\u0131m\u0131z\u0131 kabul ediyorsunuz."
+   },
+   "inside__features__highlighting__text" : {
+      "message" : "Hat\u0131rlamak istedi\u011finiz metni vurgulay\u0131n ve Evernote hesab\u0131n\u0131zda h\u0131zl\u0131ca bulun. Clearly'de yapt\u0131\u011f\u0131n\u0131z vurgulama de\u011fi\u015fiklikleri otomatik olarak Evernote hesab\u0131n\u0131zda g\u00fcncellenir."
+   },
+   "inside__features__highlighting__title" : {
+      "message" : "Vurgulama"
+   },
+   "inside__features__related_notes__text" : {
+      "message" : "G\u00f6r\u00fcnt\u00fclemekte oldu\u011funuz sayfayla ilgili notlar\u0131 Evernote hesab\u0131n\u0131zda yeniden ke\u015ffedin. \u0130lgili Notlar, alan izin verdi\u011fi takdirde makalenin sonunda ya da sa\u011f tarafta g\u00f6r\u00fcnt\u00fclenir."
+   },
+   "inside__features__related_notes__title" : {
+      "message" : "\u0130lgili Notlar"
+   },
+   "inside__features__smart_filing__text" : {
+      "message" : "Web kliplerinize otomatik olarak etiket atar ve bunlar\u0131 uygun not defterlerine sizin i\u00e7in kaydeder."
+   },
+   "inside__features__smart_filing__title" : {
+      "message" : "Ak\u0131ll\u0131 Dosyalama"
+   },
+   "inside__features__speech__no_language_explanation" : {
+      "message" : "Evernote Clearly bu makalenin dilini alg\u0131layamad\u0131. Dilin hangisini oldu\u011funu biliyorsan\u0131z, a\u015fa\u011f\u0131dan se\u00e7in; b\u00f6ylece makaleyi oynatabiliriz."
+   },
+   "inside__features__speech__no_language_title" : {
+      "message" : "Dil desteklenmiyor"
+   },
+   "inside__features__speech__text" : {
+      "message" : "Arkan\u0131za yaslan\u0131n ve yaln\u0131zca Evernote Premium abonelerinin kullanabilece\u011fi yeni Metinden Konu\u015fmaya \u00f6zelli\u011fi sayesinde blog yay\u0131nlar\u0131n\u0131, makaleleri ve web sayfalar\u0131n\u0131 sizin i\u00e7in okurken Clearly'yi dinleyin."
+   },
+   "inside__features__speech__text__available" : {
+      "message" : "21 dilde Metinden Konu\u015fmaya:"
+   },
+   "inside__features__speech__text__available_languages" : {
+      "message" : "\u0130ngilizce, Japonca, \u0130spanyolca, Frans\u0131zca, Almanca, \u00c7ince, Korece, Arap\u00e7a, \u00c7ek\u00e7e, Danca, Felemenk\u00e7e, Fince, Yunanca, Macarca, \u0130talyanca, Norve\u00e7\u00e7e, Leh\u00e7e, Portekizce, Rus\u00e7a, \u0130sve\u00e7\u00e7e ve T\u00fcrk\u00e7e."
+   },
+   "inside__features__speech__text__cancel" : {
+      "message" : "\u0130ptal"
+   },
+   "inside__features__speech__text__language" : {
+      "message" : "Dil desteklenmiyor"
+   },
+   "inside__features__speech__text__play" : {
+      "message" : "Bu dili kullanarak oynat"
+   },
+   "inside__features__speech__text__powered" : {
+      "message" : "Evernote Clearly, [=service] taraf\u0131ndan desteklenmektedir."
+   },
+   "inside__features__speech__text__requires" : {
+      "message" : "[=product] gerektirir."
+   },
+   "inside__features__speech__text__try" : {
+      "message" : "Metinden Konu\u015fmaya \u00d6zelli\u011fini Deneyin"
+   },
+   "inside__features__speech__text__upgrade" : {
+      "message" : "Evernote Premium'a Y\u00fckselt"
+   },
+   "inside__features__speech__title" : {
+      "message" : "Metinden Konu\u015fmaya"
+   },
+   "inside__features__title__all" : {
+      "message" : "Yeni Evernote Clearly uygulamas\u0131na ho\u015f geldiniz"
+   },
+   "inside__features__title__new" : {
+      "message" : "Evernote Clearly'nin yeni s\u00fcr\u00fcm\u00fcne sahipsiniz"
+   },
+   "inside__filing_info__default_notebook" : {
+      "message" : "Varsay\u0131lan Not Defteriniz"
+   },
+   "inside__filing_info__edit" : {
+      "message" : "D\u00fczenle"
+   },
+   "inside__filing_info__sentence" : {
+      "message" : "[=not defteri] not defterine k\u0131rp\u0131ld\u0131 ve [=etiketler] ile etiketlendi."
+   },
+   "inside__filing_info__sentence_and" : {
+      "message" : "ve"
+   },
+   "inside__filing_info__sentence_no_tags" : {
+      "message" : "[=not defteri] not defterine k\u0131rp\u0131ld\u0131."
+   },
+   "inside__filing_info__sentence_other_tags" : {
+      "message" : "di\u011fer etiketler"
+   },
+   "inside__filing_info__title_normal" : {
+      "message" : "Dosyalama Konumu:"
+   },
+   "inside__filing_info__title_smart" : {
+      "message" : "Ak\u0131ll\u0131 Dosyalama Konumu:"
+   },
+   "inside__filing_info__view" : {
+      "message" : "G\u00f6r\u00fcnt\u00fcle"
+   },
+   "inside__menu__clip_to_evernote__tooltip" : {
+      "message" : "K\u0131rp ve Evernote'a G\u00f6nder."
+   },
+   "inside__menu__close__tooltip" : {
+      "message" : "Bindirmeyi sakla."
+   },
+   "inside__menu__fitts__tooltip" : {
+      "message" : "Bindirmeyi sakla."
+   },
+   "inside__menu__highlight_to_evernote__tooltip" : {
+      "message" : "Vurgula."
+   },
+   "inside__menu__print__tooltip" : {
+      "message" : "Yazd\u0131r."
+   },
+   "inside__menu__settings__tooltip" : {
+      "message" : "Temalar\u0131 g\u00f6ster."
+   },
+   "inside__menu__speak__forward__tooltip" : {
+      "message" : "\u0130leri Git"
+   },
+   "inside__menu__speak__pause__tooltip" : {
+      "message" : "Duraklat"
+   },
+   "inside__menu__speak__play__tooltip" : {
+      "message" : "Oynat"
+   },
+   "inside__menu__speak__rewind__tooltip" : {
+      "message" : "Geri Git"
+   },
+   "inside__menu__speak__tooltip" : {
+      "message" : "Metinden Konu\u015fmaya"
+   },
+   "inside__misc__page" : {
+      "message" : "sayfa"
+   },
+   "inside__related_notes__disable_long" : {
+      "message" : "\u0130lgili Notlar\u0131 devre d\u0131\u015f\u0131 b\u0131rakmak ister misiniz?"
+   },
+   "inside__related_notes__disable_short" : {
+      "message" : "Devre d\u0131\u015f\u0131 b\u0131rak\u0131ls\u0131n m\u0131?"
+   },
+   "inside__related_notes__title" : {
+      "message" : "\u0130lgili Notlar"
+   },
+   "inside__rtl__ltr__label" : {
+      "message" : "Soldan-Sa\u011fa"
+   },
+   "inside__rtl__main__label" : {
+      "message" : "Metin y\u00f6n\u00fc?"
+   },
+   "inside__rtl__rtl__label" : {
+      "message" : "Sa\u011fdan-Sola"
+   },
+   "inside__settings__fontSize__large" : {
+      "message" : " b\u00fcy\u00fck"
+   },
+   "inside__settings__fontSize__medium" : {
+      "message" : "orta"
+   },
+   "inside__settings__fontSize__small" : {
+      "message" : "k\u00fc\u00e7\u00fck"
+   },
+   "inside__settings__theme__1" : {
+      "message" : "Gazete Ka\u011f\u0131d\u0131"
+   },
+   "inside__settings__theme__2" : {
+      "message" : "Not Edilebilir"
+   },
+   "inside__settings__theme__3" : {
+      "message" : "Gece Ku\u015fu"
+   },
+   "inside__settings__theme__custom" : {
+      "message" : "\u00d6zel"
+   },
+   "meta_extension_author" : {
+      "message" : "Evernote Corp."
+   },
+   "meta_extension_description" : {
+      "message" : "Clearly bloglar\u0131, makaleleri ve web sayfalar\u0131n\u0131 net ve okumas\u0131 kolay hale getirir. Bunlar\u0131 istedi\u011finiz yerde okumak i\u00e7in Evernote'a kaydedin."
+   },
+   "meta_extension_name" : {
+      "message" : "Clearly"
+   },
+   "options__account__sign_out" : {
+      "message" : "[[=username]] olarak kal\u0131c\u0131 oturum a\u00e7\u0131ld\u0131."
+   },
+   "options__account__sign_out_link" : {
+      "message" : "Oturumu kapat."
+   },
+   "options__account__signed_out" : {
+      "message" : "Kal\u0131c\u0131 olarak oturum a\u00e7mad\u0131n\u0131z. Oturum a\u00e7mak i\u00e7in Clearly yan \u00e7ubu\u011fundaki Evernote simgesini t\u0131klat\u0131n."
+   },
+   "options__base__label" : {
+      "message" : "Temel CSS"
+   },
+   "options__box_width__label" : {
+      "message" : "Sat\u0131r Geni\u015fli\u011fi"
+   },
+   "options__button__more_options" : {
+      "message" : "Daha \u00c7ok Se\u00e7enek"
+   },
+   "options__button__reset_custom" : {
+      "message" : "S\u0131f\u0131rla"
+   },
+   "options__button__save_custom" : {
+      "message" : "Temay\u0131 Kaydet"
+   },
+   "options__button__save_general" : {
+      "message" : "Kaydetme Se\u00e7enekleri"
+   },
+   "options__clip_notebook__business" : {
+      "message" : "\u0130\u015f Not Defterleri"
+   },
+   "options__clip_notebook__no__label" : {
+      "message" : "Varsay\u0131lan Not Defterini Kullan"
+   },
+   "options__clip_notebook__shared" : {
+      "message" : "Payla\u015f\u0131lan Not Defterleri"
+   },
+   "options__clip_notebook__yes__label" : {
+      "message" : "Bu Not Defterini kullan"
+   },
+   "options__clip_notebook__your" : {
+      "message" : "Not Defterleriniz"
+   },
+   "options__clip_tag__no__label" : {
+      "message" : "Etiketleme"
+   },
+   "options__clip_tag__yes__label" : {
+      "message" : "Etiketleme se\u00e7ene\u011fi:"
+   },
+   "options__color_background__label" : {
+      "message" : "Arka Plan Rengi"
+   },
+   "options__color_links__label" : {
+      "message" : "Ba\u011flant\u0131 Rengi"
+   },
+   "options__color_text__label" : {
+      "message" : "\u00d6n Plan Rengi"
+   },
+   "options__custom_css__label" : {
+      "message" : "\u00d6zel CSS"
+   },
+   "options__footnote_links__label" : {
+      "message" : "Alt Bilgi Olarak Ba\u011flant\u0131lar"
+   },
+   "options__keys_activation__label" : {
+      "message" : "Sayfay\u0131 Clearly'de g\u00f6r\u00fcnt\u00fcle"
+   },
+   "options__keys_clip__label" : {
+      "message" : "K\u0131rp ve Evernote'a G\u00f6nder"
+   },
+   "options__keys_highlight__label" : {
+      "message" : "Vurgula"
+   },
+   "options__keys_speech__label" : {
+      "message" : "Metinden Konu\u015fmaya"
+   },
+   "options__large_graphics__label" : {
+      "message" : "B\u00fcy\u00fck Resimler"
+   },
+   "options__message__keys" : {
+      "message" : "De\u011fi\u015ftirmek i\u00e7in, imleci alana getirin ve klavyenizde tu\u015f kombinasyonuna bas\u0131n."
+   },
+   "options__message__keys_firefox" : {
+      "message" : "Kaydettikten sonra taray\u0131c\u0131n\u0131z\u0131 yeniden ba\u015flat\u0131n."
+   },
+   "options__message__notebook" : {
+      "message" : "Evernote'a K\u0131rpma yap\u0131ld\u0131\u011f\u0131nda hedef not defteri"
+   },
+   "options__message__open_notes_in" : {
+      "message" : "Clearly'den notlar a\u00e7arken, belirli bir Evernote istemcisi kullan\u0131n."
+   },
+   "options__message__related_notes" : {
+      "message" : "Evernote'un hesab\u0131n\u0131zdan \u015fu an okudu\u011funuzla ilgili olabilecek klipler getirmesini sa\u011flay\u0131n."
+   },
+   "options__message__saved" : {
+      "message" : "Ayarlar, Clearly'yi kulland\u0131\u011f\u0131n\u0131z t\u00fcm yeni sekmelerde ge\u00e7erli olacakt\u0131r."
+   },
+   "options__message__smart_filing" : {
+      "message" : "Evernote'un hangi Not defteri kliplerine girip hangi Etiketleri getirmesi gerekti\u011fine karar vermesini sa\u011flay\u0131n."
+   },
+   "options__message__tags" : {
+      "message" : "Evernote'a klip g\u00f6nderdi\u011finizde uygulanacak etiketler."
+   },
+   "options__open_notes_in__desktop__label" : {
+      "message" : "Masa\u00fcst\u00fc istemcisi"
+   },
+   "options__open_notes_in__web__label" : {
+      "message" : "Web istemcisi"
+   },
+   "options__related_notes__disabled__label" : {
+      "message" : "\u0130lgili Notlar\u0131 Devre D\u0131\u015f\u0131 B\u0131rak"
+   },
+   "options__related_notes__enabled__label" : {
+      "message" : "\u0130lgili Notlar\u0131 Etkinle\u015ftir"
+   },
+   "options__related_notes__just_at_bottom__label" : {
+      "message" : "\u0130lgili Notlar\u0131 etkinle\u015ftir ve yaln\u0131zca altta g\u00f6ster"
+   },
+   "options__smart_filing__disabled__label" : {
+      "message" : "Ak\u0131ll\u0131 Dosyalama'y\u0131 Devre D\u0131\u015f\u0131 B\u0131rak"
+   },
+   "options__smart_filing__enabled__label" : {
+      "message" : "Ak\u0131ll\u0131 Dosyalama'y\u0131 Etkinle\u015ftir"
+   },
+   "options__smart_filing__just_notebooks__label" : {
+      "message" : "Ak\u0131ll\u0131 Dosyalamay\u0131 yaln\u0131zca Not Defterleri i\u00e7in etkinle\u015ftir"
+   },
+   "options__smart_filing__just_tags__label" : {
+      "message" : "Ak\u0131ll\u0131 Dosyalamay\u0131 yaln\u0131zca Etiketler i\u00e7in etkinle\u015ftir"
+   },
+   "options__smart_filing_for_business__label" : {
+      "message" : "\u0130\u015f Not Defterlerinde Ak\u0131ll\u0131 Dosyalamaya \u0130zin Ver"
+   },
+   "options__speech_demo__label" : {
+      "message" : "Demo"
+   },
+   "options__speech_gender__label" : {
+      "message" : "Okuma Sesi"
+   },
+   "options__speech_speed__label" : {
+      "message" : "Okuma H\u0131z\u0131"
+   },
+   "options__text_align__label" : {
+      "message" : "Metin Hizalama"
+   },
+   "options__text_font__label" : {
+      "message" : "G\u00f6vde Yaz\u0131 Tipi"
+   },
+   "options__text_font_header__label" : {
+      "message" : "Ba\u015fl\u0131k Yaz\u0131 Tipi"
+   },
+   "options__text_font_monospace__label" : {
+      "message" : "E\u015f Aral\u0131kl\u0131 Yaz\u0131 Tipi"
+   },
+   "options__text_line_height__label" : {
+      "message" : "Sat\u0131r Y\u00fcksekli\u011fi"
+   },
+   "options__text_size__label" : {
+      "message" : "Taban Yaz\u0131 Tipi Boyutu"
+   },
+   "options__title__custom" : {
+      "message" : "\u00d6zel Tema"
+   },
+   "options__title__features" : {
+      "message" : "Clearly \u00d6zellikleri"
+   },
+   "options__title__general" : {
+      "message" : "Se\u00e7enekler"
+   },
+   "options__title__page" : {
+      "message" : "Clearly \/ Se\u00e7enekler"
+   },
+   "options__title__speech" : {
+      "message" : "Metinden Konu\u015fmaya"
+   },
+   "options__title__sub__account" : {
+      "message" : "Hesap"
+   },
+   "options__title__sub__keyboard" : {
+      "message" : "Klavye k\u0131sayollar\u0131"
+   },
+   "options__title__sub__notebook" : {
+      "message" : "Not Defteri"
+   },
+   "options__title__sub__open_notes_in" : {
+      "message" : "Notlar\u0131 \u015furada a\u00e7"
+   },
+   "options__title__sub__related_notes" : {
+      "message" : "\u0130lgili Notlar"
+   },
+   "options__title__sub__smart_filing" : {
+      "message" : "Ak\u0131ll\u0131 Dosyalama"
+   },
+   "options__title__sub__tags" : {
+      "message" : "Etiketler"
+   },
+   "options__values__base__Blueprint" : {
+      "message" : "Mavi Bask\u0131"
+   },
+   "options__values__base__None" : {
+      "message" : "Hi\u00e7biri"
+   },
+   "options__values__base__Theme_1" : {
+      "message" : "Klasik"
+   },
+   "options__values__base__Theme_2" : {
+      "message" : "Modern"
+   },
+   "options__values__base__Theme_3" : {
+      "message" : "Gece"
+   },
+   "options__values__footnote_links__Always" : {
+      "message" : "Her zaman"
+   },
+   "options__values__footnote_links__Never" : {
+      "message" : "Hi\u00e7bir zaman"
+   },
+   "options__values__footnote_links__On_Print" : {
+      "message" : "Yazd\u0131r\u0131l\u0131yor"
+   },
+   "options__values__large_graphics__Do_Nothing" : {
+      "message" : "Her Zaman G\u00f6ster"
+   },
+   "options__values__large_graphics__Hide_Always" : {
+      "message" : "Her Zaman Sakla"
+   },
+   "options__values__large_graphics__Hide_on_Print" : {
+      "message" : "Yazd\u0131r\u0131rken Sakla"
+   },
+   "options__values__menu_placement__Bottom_Right" : {
+      "message" : "Alt Sa\u011f"
+   },
+   "options__values__menu_placement__Top_Right" : {
+      "message" : "\u00dcst Sa\u011f"
+   },
+   "options__values__speech_gender__default" : {
+      "message" : "Varsay\u0131lan"
+   },
+   "options__values__speech_gender__female" : {
+      "message" : "Kad\u0131n (mevcutsa)"
+   },
+   "options__values__speech_gender__male" : {
+      "message" : "Erkek (mevcutsa)"
+   },
+   "options__values__speech_speed__fast" : {
+      "message" : "H\u0131zl\u0131"
+   },
+   "options__values__speech_speed__faster" : {
+      "message" : "Daha H\u0131zl\u0131"
+   },
+   "options__values__speech_speed__fastest" : {
+      "message" : "En H\u0131zl\u0131"
+   },
+   "options__values__speech_speed__normal" : {
+      "message" : "Normal"
+   },
+   "options__values__speech_speed__slow" : {
+      "message" : "Yava\u015f"
+   },
+   "options__values__speech_speed__slower" : {
+      "message" : "Daha Yava\u015f"
+   },
+   "options__values__speech_speed__slowest" : {
+      "message" : "En Yava\u015f"
+   },
+   "options__values__text_align__Justified" : {
+      "message" : "Yaslanm\u0131\u015f"
+   },
+   "options__values__text_align__Normal" : {
+      "message" : "Normal"
+   }
+}

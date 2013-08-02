@@ -1,0 +1,572 @@
+{
+   "chrome_browser_action" : {
+      "message" : "\u3053\u306e\u30da\u30fc\u30b8\u3092 Clearly \u3067\u8868\u793a"
+   },
+   "chrome_context_menu" : {
+      "message" : "Clearly"
+   },
+   "firefox_button" : {
+      "message" : "Clearly"
+   },
+   "firefox_button_tooltip" : {
+      "message" : "\u3053\u306e\u30da\u30fc\u30b8\u3092 Clearly \u3067\u8868\u793a"
+   },
+   "firefox_context_menu" : {
+      "message" : "Clearly"
+   },
+   "firefox_menu" : {
+      "message" : "Clearly"
+   },
+   "inside__blank_error__body" : {
+      "message" : "Clearly \u306f\u73fe\u5728\u3001\u8a18\u4e8b\u30da\u30fc\u30b8\u4e0a\u3067\u52d5\u4f5c\u3059\u308b\u3088\u3046\u8a2d\u8a08\u3055\u308c\u3066\u3044\u307e\u3059\u3002\u8a18\u4e8b\u30da\u30fc\u30b8\u3068\u306f\u3001\u65b0\u805e\u8a18\u4e8b\u3084\u30d6\u30ed\u30b0\u8a18\u4e8b\u306a\u3069\u30011 \u3064\u306e\u5927\u304d\u306a\u30c6\u30ad\u30b9\u30c8\u306e\u56fa\u307e\u308a\u3092\u542b\u3080\u30da\u30fc\u30b8\u3092\u6307\u3057\u307e\u3059\u3002"
+   },
+   "inside__blank_error__heading" : {
+      "message" : "Evernote Clearly \u3092\u4f7f\u7528\u3059\u308b\u305f\u3081\u306e\u30d2\u30f3\u30c8"
+   },
+   "inside__evernote_clipping" : {
+      "message" : "\u30af\u30ea\u30c3\u30d7\u4e2d..."
+   },
+   "inside__evernote_clipping_failed" : {
+      "message" : "\u30af\u30ea\u30c3\u30d7\u306b\u5931\u6557\u3057\u307e\u3057\u305f"
+   },
+   "inside__evernote_login__button_cancel__label" : {
+      "message" : "\u30ad\u30e3\u30f3\u30bb\u30eb"
+   },
+   "inside__evernote_login__button_do__label" : {
+      "message" : "\u30b5\u30a4\u30f3\u30a4\u30f3"
+   },
+   "inside__evernote_login__create_account" : {
+      "message" : "\u30a2\u30ab\u30a6\u30f3\u30c8\u3092\u4f5c\u6210"
+   },
+   "inside__evernote_login__general__error" : {
+      "message" : "\u8a8d\u8a3c\u306b\u5931\u6557\u3057\u307e\u3057\u305f"
+   },
+   "inside__evernote_login__heading" : {
+      "message" : "Evernote \u306b\u30b5\u30a4\u30f3\u30a4\u30f3"
+   },
+   "inside__evernote_login__password__error__format" : {
+      "message" : "\u30d1\u30b9\u30ef\u30fc\u30c9\u306b\u4e0d\u6b63\u306a\u6587\u5b57\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u3059"
+   },
+   "inside__evernote_login__password__error__invalid" : {
+      "message" : "\u30e6\u30fc\u30b6\u540d\u3068\u30d1\u30b9\u30ef\u30fc\u30c9\u304c\u65e2\u5b58\u306e\u30e6\u30fc\u30b6\u3068\u4e00\u81f4\u3057\u307e\u305b\u3093"
+   },
+   "inside__evernote_login__password__error__length" : {
+      "message" : "\u30d1\u30b9\u30ef\u30fc\u30c9\u306f 6 \u6587\u5b57\u304b\u3089 64 \u6587\u5b57\u306e\u9577\u3055\u306b\u3057\u3066\u4e0b\u3055\u3044"
+   },
+   "inside__evernote_login__password__error__required" : {
+      "message" : "\u30d1\u30b9\u30ef\u30fc\u30c9\u304c\u5fc5\u8981\u3067\u3059"
+   },
+   "inside__evernote_login__password__error__reset" : {
+      "message" : "\u30d1\u30b9\u30ef\u30fc\u30c9\u306e\u671f\u9650\u304c\u5207\u308c\u307e\u3057\u305f\u3002\u4eca\u3059\u3050\u30ea\u30bb\u30c3\u30c8\u3057\u3066\u4e0b\u3055\u3044\u3002"
+   },
+   "inside__evernote_login__password__error__timeout" : {
+      "message" : "\u30ed\u30b0\u30a4\u30f3\u306e\u30bb\u30c3\u30b7\u30e7\u30f3\u304c\u30bf\u30a4\u30e0\u30a2\u30a6\u30c8\u306b\u306a\u308a\u307e\u3057\u305f\u3002\u518d\u5ea6\u304a\u8a66\u3057\u4e0b\u3055\u3044\u3002"
+   },
+   "inside__evernote_login__password__label" : {
+      "message" : "\u30d1\u30b9\u30ef\u30fc\u30c9"
+   },
+   "inside__evernote_login__rememberMe__label" : {
+      "message" : "\u30ed\u30b0\u30a4\u30f3\u60c5\u5831\u3092\u8a18\u61b6\u3059\u308b"
+   },
+   "inside__evernote_login__spinner" : {
+      "message" : "Evernote \u306b\u30b5\u30a4\u30f3\u30a4\u30f3\u4e2d"
+   },
+   "inside__evernote_login__username__error__format" : {
+      "message" : "\u30e6\u30fc\u30b6\u540d\u306b\u4e0d\u6b63\u306a\u6587\u5b57\u304c\u542b\u307e\u308c\u3066\u3044\u307e\u3059"
+   },
+   "inside__evernote_login__username__error__invalid" : {
+      "message" : "\u6709\u52b9\u306a\u30a2\u30af\u30c6\u30a3\u30d6\u30e6\u30fc\u30b6\u304c\u5b58\u5728\u3057\u307e\u305b\u3093"
+   },
+   "inside__evernote_login__username__error__length" : {
+      "message" : "\u30e6\u30fc\u30b6\u540d\u306f 1\u301c64 \u6587\u5b57\u306e\u9577\u3055\u306b\u3059\u308b\u5fc5\u8981\u304c\u3042\u308a\u307e\u3059"
+   },
+   "inside__evernote_login__username__error__required" : {
+      "message" : "\u30e6\u30fc\u30b6\u540d\u306f\u5fc5\u9808\u9805\u76ee\u3067\u3059\u3002"
+   },
+   "inside__evernote_login__username__label" : {
+      "message" : "Evernote \u30e6\u30fc\u30b6\u540d\u307e\u305f\u306f\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9"
+   },
+   "inside__evernote_two_factor__button_do__label" : {
+      "message" : "\u7d9a\u3051\u308b"
+   },
+   "inside__evernote_two_factor__button_help__label" : {
+      "message" : "\u78ba\u8a8d\u30b3\u30fc\u30c9\u304c\u53d6\u5f97\u3067\u304d\u307e\u305b\u3093"
+   },
+   "inside__evernote_two_factor__code__error__format" : {
+      "message" : "\u78ba\u8a8d\u30b3\u30fc\u30c9\u306b\u306f\u6570\u5b57\u306e\u307f\u304c\u4f7f\u7528\u3055\u308c\u307e\u3059\u3002"
+   },
+   "inside__evernote_two_factor__code__error__invalid" : {
+      "message" : "\u78ba\u8a8d\u30b3\u30fc\u30c9\u304c\u6b63\u3057\u304f\u3042\u308a\u307e\u305b\u3093\u3002"
+   },
+   "inside__evernote_two_factor__code__error__length" : {
+      "message" : "\u78ba\u8a8d\u30b3\u30fc\u30c9\u306f\u6700\u4f4e 6 \u6587\u5b57\u4ee5\u4e0a\u3067\u3059\u3002"
+   },
+   "inside__evernote_two_factor__code__error__required" : {
+      "message" : "\u78ba\u8a8d\u30b3\u30fc\u30c9\u304c\u5fc5\u8981\u3067\u3059\u3002"
+   },
+   "inside__evernote_two_factor__code__label" : {
+      "message" : "6 \u6841\u306e\u30b3\u30fc\u30c9"
+   },
+   "inside__evernote_two_factor__message__google" : {
+      "message" : "Google \u8a8d\u8a3c\u30b7\u30b9\u30c6\u30e0\u30a2\u30d7\u30ea\u306b\u8868\u793a\u3055\u308c\u305f\u78ba\u8a8d\u30b3\u30fc\u30c9\u3092\u5165\u529b\u3057\u307e\u3059\u3002"
+   },
+   "inside__evernote_two_factor__message__sms" : {
+      "message" : "\u78ba\u8a8d\u30b3\u30fc\u30c9\u3092\u8a18\u8f09\u3057\u305f\u30c6\u30ad\u30b9\u30c8\u30e1\u30c3\u30bb\u30fc\u30b8\u3092\u6b21\u306e\u5b9b\u5148\u306b\u9001\u4fe1\u3057\u307e\u3057\u305f:"
+   },
+   "inside__features__clipping__text" : {
+      "message" : "\u8aad\u3093\u3067\u3044\u308b\u5185\u5bb9\u3092\u30ef\u30f3\u30af\u30ea\u30c3\u30af\u3067 Evernote \u30a2\u30ab\u30a6\u30f3\u30c8\u306b\u4fdd\u5b58\u3002\u3044\u3064\u3067\u3082\u3069\u306e\u30c7\u30d0\u30a4\u30b9\u304b\u3089\u3067\u3082\u3001Evernote \u5185\u306e\u30af\u30ea\u30c3\u30d7\u306b\u30a2\u30af\u30bb\u30b9\u3067\u304d\u307e\u3059\u3002"
+   },
+   "inside__features__clipping__title" : {
+      "message" : "Evernote \u306b\u30af\u30ea\u30c3\u30d7"
+   },
+   "inside__features__close2" : {
+      "message" : "\u9589\u3058\u308b"
+   },
+   "inside__features__eula_notice" : {
+      "message" : "Clearly \u3092\u4f7f\u7528\u3059\u308b\u3053\u3068\u306b\u3088\u308a\u3001[=eula]\u306b\u540c\u610f\u3057\u305f\u3068\u307f\u306a\u3055\u308c\u307e\u3059\u3002"
+   },
+   "inside__features__highlighting__text" : {
+      "message" : "\u899a\u3048\u3066\u304a\u304d\u305f\u3044\u30c6\u30ad\u30b9\u30c8\u3092\u5f37\u8abf\u8868\u793a\u3057\u3066\u304a\u3051\u3070\u3001Evernote \u30a2\u30ab\u30a6\u30f3\u30c8\u3067\u898b\u305f\u3068\u304d\u306b\u7d20\u65e9\u304f\u898b\u3064\u3051\u3089\u308c\u307e\u3059\u3002Clearly \u3067\u52a0\u3048\u305f\u5f37\u8abf\u8868\u793a\u306f\u3001\u81ea\u52d5\u7684\u306b Evernote \u30a2\u30ab\u30a6\u30f3\u30c8\u306b\u53cd\u6620\u3055\u308c\u307e\u3059\u3002"
+   },
+   "inside__features__highlighting__title" : {
+      "message" : "\u5f37\u8abf\u8868\u793a"
+   },
+   "inside__features__related_notes__text" : {
+      "message" : "\u8868\u793a\u4e2d\u306e\u30da\u30fc\u30b8\u306b\u95a2\u9023\u3059\u308b\u30ce\u30fc\u30c8\u3092 Evernote \u30a2\u30ab\u30a6\u30f3\u30c8\u304b\u3089\u518d\u767a\u898b\u3002\u95a2\u9023\u3059\u308b\u30ce\u30fc\u30c8\u306f\u8a18\u4e8b\u306e\u4e0b\u5074\u3001\u307e\u305f\u306f\u30b9\u30da\u30fc\u30b9\u304c\u3042\u308b\u5834\u5408\u306f\u53f3\u5074\u306b\u8868\u793a\u3055\u308c\u307e\u3059\u3002"
+   },
+   "inside__features__related_notes__title" : {
+      "message" : "\u95a2\u9023\u3059\u308b\u30ce\u30fc\u30c8"
+   },
+   "inside__features__smart_filing__text" : {
+      "message" : "Web \u200b\u200b\u30af\u30ea\u30c3\u30d7\u306b\u81ea\u52d5\u7684\u306b\u30bf\u30b0\u3092\u5272\u308a\u5f53\u3066\u3001\u9069\u5207\u306a\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u306b\u4fdd\u5b58\u3057\u3088\u3046\u3068\u3057\u307e\u3059\u3002"
+   },
+   "inside__features__smart_filing__title" : {
+      "message" : "\u30b9\u30de\u30fc\u30c8\u30d5\u30a1\u30a4\u30ea\u30f3\u30b0"
+   },
+   "inside__features__speech__no_language_explanation" : {
+      "message" : "Evernote Clearly \u306f\u3053\u306e\u8a18\u4e8b\u306e\u8a00\u8a9e\u3092\u5224\u5225\u3067\u304d\u307e\u305b\u3093\u3067\u3057\u305f\u3002\u8a00\u8a9e\u3092\u4ee5\u4e0b\u304b\u3089\u9078\u629e\u3059\u308b\u3068\u3001\u518d\u751f\u3057\u307e\u3059\u3002"
+   },
+   "inside__features__speech__no_language_title" : {
+      "message" : "\u8a00\u8a9e\u306b\u5bfe\u5fdc\u3057\u3066\u3044\u307e\u305b\u3093"
+   },
+   "inside__features__speech__text" : {
+      "message" : "Clearly \u306b\u30c6\u30ad\u30b9\u30c8\u8aad\u307f\u4e0a\u3052\u6a5f\u80fd\u304c\u642d\u8f09\u3055\u308c\u3001\u30d6\u30ed\u30b0\u30dd\u30b9\u30c8\u3084\u8a18\u4e8b\u3001Web \u30da\u30fc\u30b8\u3092\u97f3\u58f0\u5909\u63db\u3067\u304d\u308b\u3088\u3046\u306b\u306a\u308a\u307e\u3057\u305f\u3002Evernote \u30d7\u30ec\u30df\u30a2\u30e0\u30e6\u30fc\u30b6\u5c02\u7528\u6a5f\u80fd\u3067\u3059\u3002"
+   },
+   "inside__features__speech__text__available" : {
+      "message" : "21 \u30f6\u56fd\u8a9e\u306b\u5bfe\u5fdc:"
+   },
+   "inside__features__speech__text__available_languages" : {
+      "message" : "\u65e5\u672c\u8a9e\u3001\u82f1\u8a9e\u3001\u30b9\u30da\u30a4\u30f3\u8a9e\u3001\u30d5\u30e9\u30f3\u30b9\u8a9e\u3001\u30c9\u30a4\u30c4\u8a9e\u3001\u4e2d\u56fd\u8a9e\u3001\u97d3\u56fd\u8a9e\u3001\u30a2\u30e9\u30d3\u30a2\u8a9e\u3001\u30a4\u30bf\u30ea\u30a2\u8a9e\u3001\u30aa\u30e9\u30f3\u30c0\u8a9e\u3001\u30ae\u30ea\u30b7\u30e3\u8a9e\u3001\u30b9\u30a6\u30a7\u30fc\u30c7\u30f3\u8a9e\u3001\u30c1\u30a7\u30b3\u8a9e\u3001\u30c7\u30f3\u30de\u30fc\u30af\u8a9e\u3001\u30c8\u30eb\u30b3\u8a9e\u3001\u30ce\u30eb\u30a6\u30a7\u30fc\u8a9e\u3001\u30cf\u30f3\u30ac\u30ea\u30fc\u8a9e\u3001\u30d5\u30a3\u30f3\u30e9\u30f3\u30c9\u8a9e\u3001\u30dd\u30fc\u30e9\u30f3\u30c9\u8a9e\u3001\u30dd\u30eb\u30c8\u30ac\u30eb\u8a9e\u3001\u30ed\u30b7\u30a2\u8a9e\u3002"
+   },
+   "inside__features__speech__text__cancel" : {
+      "message" : "\u30ad\u30e3\u30f3\u30bb\u30eb"
+   },
+   "inside__features__speech__text__language" : {
+      "message" : "\u8a00\u8a9e\u306b\u5bfe\u5fdc\u3057\u3066\u3044\u307e\u305b\u3093"
+   },
+   "inside__features__speech__text__play" : {
+      "message" : "\u3053\u306e\u8a00\u8a9e\u3067\u518d\u751f"
+   },
+   "inside__features__speech__text__powered" : {
+      "message" : "Evernote Clearly \u306b\u306f\u3001 [=service] \u306e\u6280\u8853\u304c\u4f7f\u308f\u308c\u3066\u3044\u307e\u3059\u3002"
+   },
+   "inside__features__speech__text__requires" : {
+      "message" : "[=product] \u304c\u5fc5\u8981\u3067\u3059\u3002"
+   },
+   "inside__features__speech__text__try" : {
+      "message" : "\u8aad\u307f\u4e0a\u3052\u6a5f\u80fd\u3092\u8a66\u3059"
+   },
+   "inside__features__speech__text__upgrade" : {
+      "message" : "Evernote \u30d7\u30ec\u30df\u30a2\u30e0\u306b\u30a2\u30c3\u30d7\u30b0\u30ec\u30fc\u30c9"
+   },
+   "inside__features__speech__title" : {
+      "message" : "\u30c6\u30ad\u30b9\u30c8\u8aad\u307f\u4e0a\u3052"
+   },
+   "inside__features__title__all" : {
+      "message" : "\u751f\u307e\u308c\u5909\u308f\u3063\u305f Evernote Clearly \u3078\u3088\u3046\u3053\u305d"
+   },
+   "inside__features__title__new" : {
+      "message" : "Evernote Clearly \u306e\u65b0\u30d0\u30fc\u30b8\u30e7\u30f3\u3092\u3054\u5229\u7528\u3067\u3059"
+   },
+   "inside__filing_info__default_notebook" : {
+      "message" : "\u65e2\u5b9a\u306e\u30ce\u30fc\u30c8\u30d6\u30c3\u30af"
+   },
+   "inside__filing_info__edit" : {
+      "message" : "\u7de8\u96c6"
+   },
+   "inside__filing_info__sentence" : {
+      "message" : "[=notebook] \u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u306b\u30af\u30ea\u30c3\u30d7\u3057\u3001[=tags] \u3067\u30bf\u30b0\u4ed8\u3051\u3055\u308c\u307e\u3057\u305f\u3002"
+   },
+   "inside__filing_info__sentence_and" : {
+      "message" : "\u3068"
+   },
+   "inside__filing_info__sentence_no_tags" : {
+      "message" : "[=notebook] \u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u306b\u30af\u30ea\u30c3\u30d7\u3055\u308c\u307e\u3057\u305f\u3002"
+   },
+   "inside__filing_info__sentence_other_tags" : {
+      "message" : "\u4ed6\u306e\u30bf\u30b0"
+   },
+   "inside__filing_info__title_normal" : {
+      "message" : "\u4fdd\u5b58\u5834\u6240:"
+   },
+   "inside__filing_info__title_smart" : {
+      "message" : "\u30b9\u30de\u30fc\u30c8\u4fdd\u5b58\u5834\u6240:"
+   },
+   "inside__filing_info__view" : {
+      "message" : "\u8868\u793a"
+   },
+   "inside__menu__clip_to_evernote__tooltip" : {
+      "message" : "Evernote \u306b\u30af\u30ea\u30c3\u30d7"
+   },
+   "inside__menu__close__tooltip" : {
+      "message" : "\u30aa\u30fc\u30d0\u30fc\u30ec\u30a4\u3092\u96a0\u3059"
+   },
+   "inside__menu__fitts__tooltip" : {
+      "message" : "\u30aa\u30fc\u30d0\u30fc\u30ec\u30a4\u3092\u96a0\u3059"
+   },
+   "inside__menu__highlight_to_evernote__tooltip" : {
+      "message" : "\u5f37\u8abf\u8868\u793a"
+   },
+   "inside__menu__print__tooltip" : {
+      "message" : "\u5370\u5237"
+   },
+   "inside__menu__settings__tooltip" : {
+      "message" : "\u30c6\u30fc\u30de\u3092\u8868\u793a"
+   },
+   "inside__menu__speak__forward__tooltip" : {
+      "message" : "\u9032\u3080"
+   },
+   "inside__menu__speak__pause__tooltip" : {
+      "message" : "\u505c\u6b62"
+   },
+   "inside__menu__speak__play__tooltip" : {
+      "message" : "\u518d\u751f"
+   },
+   "inside__menu__speak__rewind__tooltip" : {
+      "message" : "\u623b\u308b"
+   },
+   "inside__menu__speak__tooltip" : {
+      "message" : "\u30c6\u30ad\u30b9\u30c8\u8aad\u307f\u4e0a\u3052"
+   },
+   "inside__misc__page" : {
+      "message" : "\u30da\u30fc\u30b8"
+   },
+   "inside__related_notes__disable_long" : {
+      "message" : "\u95a2\u9023\u30ce\u30fc\u30c8\u6a5f\u80fd\u3092\u7121\u52b9\u306b\u3057\u307e\u3059\u304b\uff1f"
+   },
+   "inside__related_notes__disable_short" : {
+      "message" : "\u7121\u52b9\u306b\u3057\u307e\u3059\u304b\uff1f"
+   },
+   "inside__related_notes__title" : {
+      "message" : "\u95a2\u9023\u3059\u308b\u30ce\u30fc\u30c8"
+   },
+   "inside__rtl__ltr__label" : {
+      "message" : "\u5de6\u304b\u3089\u53f3"
+   },
+   "inside__rtl__main__label" : {
+      "message" : "\u30c6\u30ad\u30b9\u30c8\u306e\u65b9\u5411\uff1f"
+   },
+   "inside__rtl__rtl__label" : {
+      "message" : "\u53f3\u304b\u3089\u5de6"
+   },
+   "inside__settings__fontSize__large" : {
+      "message" : "\u5927"
+   },
+   "inside__settings__fontSize__medium" : {
+      "message" : "\u4e2d"
+   },
+   "inside__settings__fontSize__small" : {
+      "message" : "\u5c0f"
+   },
+   "inside__settings__theme__1" : {
+      "message" : "Newsprint"
+   },
+   "inside__settings__theme__2" : {
+      "message" : "Notable"
+   },
+   "inside__settings__theme__3" : {
+      "message" : "Night Owl"
+   },
+   "inside__settings__theme__custom" : {
+      "message" : "\u30ab\u30b9\u30bf\u30e0"
+   },
+   "meta_extension_author" : {
+      "message" : "Evernote Corp."
+   },
+   "meta_extension_description" : {
+      "message" : "Clearly \u306f\u30d6\u30ed\u30b0\u30dd\u30b9\u30c8\u3084\u8a18\u4e8b\u3001Web \u30da\u30fc\u30b8\u3092\u304d\u308c\u3044\u306b\u3057\u3001\u7c21\u5358\u306b\u8aad\u3081\u308b\u3088\u3046\u306b\u3057\u307e\u3059\u3002Evernote \u306b\u4fdd\u5b58\u3059\u308c\u3070\u3001\u3069\u3053\u3067\u3082\u8aad\u3081\u308b\u3088\u3046\u306b\u306a\u308a\u307e\u3059\u3002"
+   },
+   "meta_extension_name" : {
+      "message" : "Clearly"
+   },
+   "options__account__sign_out" : {
+      "message" : "[[=username]] \u3067\u30b5\u30a4\u30f3\u30a4\u30f3\u3057\u3066\u3044\u307e\u3059\u3002"
+   },
+   "options__account__sign_out_link" : {
+      "message" : "\u30b5\u30a4\u30f3\u30a2\u30a6\u30c8"
+   },
+   "options__account__signed_out" : {
+      "message" : "\u30b5\u30a4\u30f3\u30a4\u30f3\u3057\u3066\u3044\u307e\u305b\u3093\u3002Clearly \u306e\u30b5\u30a4\u30c9\u30d0\u30fc\u306b\u3042\u308b Evernote \u30a2\u30a4\u30b3\u30f3\u3092\u30af\u30ea\u30c3\u30af\u3057\u3066\u3001\u30b5\u30a4\u30f3\u30a4\u30f3\u3057\u3066\u4e0b\u3055\u3044\u3002"
+   },
+   "options__base__label" : {
+      "message" : "\u57fa\u672c CSS"
+   },
+   "options__box_width__label" : {
+      "message" : "\u884c\u306e\u5e45"
+   },
+   "options__button__more_options" : {
+      "message" : "\u305d\u306e\u4ed6\u306e\u30aa\u30d7\u30b7\u30e7\u30f3"
+   },
+   "options__button__reset_custom" : {
+      "message" : "\u30ea\u30bb\u30c3\u30c8"
+   },
+   "options__button__save_custom" : {
+      "message" : "\u30c6\u30fc\u30de\u3092\u4fdd\u5b58"
+   },
+   "options__button__save_general" : {
+      "message" : "\u30aa\u30d7\u30b7\u30e7\u30f3\u3092\u4fdd\u5b58"
+   },
+   "options__clip_notebook__business" : {
+      "message" : "\u30d3\u30b8\u30cd\u30b9\u30ce\u30fc\u30c8\u30d6\u30c3\u30af"
+   },
+   "options__clip_notebook__no__label" : {
+      "message" : "\u65e2\u5b9a\u306e\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u3092\u4f7f\u7528"
+   },
+   "options__clip_notebook__shared" : {
+      "message" : "\u5171\u6709\u30ce\u30fc\u30c8\u30d6\u30c3\u30af"
+   },
+   "options__clip_notebook__yes__label" : {
+      "message" : "\u3053\u306e\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u3092\u4f7f\u7528"
+   },
+   "options__clip_notebook__your" : {
+      "message" : "\u81ea\u5206\u306e\u30ce\u30fc\u30c8\u30d6\u30c3\u30af"
+   },
+   "options__clip_tag__no__label" : {
+      "message" : "\u30bf\u30b0\u3092\u4ed8\u3051\u306a\u3044"
+   },
+   "options__clip_tag__yes__label" : {
+      "message" : "\u3053\u306e\u30bf\u30b0\u3092\u4ed8\u3051\u308b:"
+   },
+   "options__color_background__label" : {
+      "message" : "\u80cc\u666f\u8272"
+   },
+   "options__color_links__label" : {
+      "message" : "\u30ea\u30f3\u30af\u8272"
+   },
+   "options__color_text__label" : {
+      "message" : "\u524d\u666f\u8272"
+   },
+   "options__custom_css__label" : {
+      "message" : "\u30ab\u30b9\u30bf\u30e0 CSS"
+   },
+   "options__footnote_links__label" : {
+      "message" : "\u30ea\u30f3\u30af\u306e\u811a\u6ce8\u8868\u793a"
+   },
+   "options__keys_activation__label" : {
+      "message" : "\u30da\u30fc\u30b8\u3092 Clearly \u3067\u8868\u793a"
+   },
+   "options__keys_clip__label" : {
+      "message" : "Evernote \u306b\u30af\u30ea\u30c3\u30d7"
+   },
+   "options__keys_highlight__label" : {
+      "message" : "\u5f37\u8abf\u8868\u793a"
+   },
+   "options__keys_speech__label" : {
+      "message" : "\u30c6\u30ad\u30b9\u30c8\u8aad\u307f\u4e0a\u3052"
+   },
+   "options__large_graphics__label" : {
+      "message" : "\u5927\u304d\u306a\u753b\u50cf"
+   },
+   "options__message__keys" : {
+      "message" : "\u5909\u66f4\u3059\u308b\u306b\u306f\u3001\u9805\u76ee\u306b\u30ab\u30fc\u30bd\u30eb\u3092\u79fb\u52d5\u3057\u3001\u30ad\u30fc\u30dc\u30fc\u30c9\u3067\u30ad\u30fc\u306e\u7d44\u307f\u5408\u308f\u305b\u3092\u62bc\u3057\u3066\u4e0b\u3055\u3044\u3002"
+   },
+   "options__message__keys_firefox" : {
+      "message" : "\u4fdd\u5b58\u5f8c\u306f\u30d6\u30e9\u30a6\u30b6\u3092\u518d\u8d77\u52d5\u3057\u3066\u4e0b\u3055\u3044"
+   },
+   "options__message__notebook" : {
+      "message" : "Evernote \u306b\u30af\u30ea\u30c3\u30d7\u3059\u308b\u969b\u306e\u4fdd\u5b58\u5148\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u3002"
+   },
+   "options__message__open_notes_in" : {
+      "message" : "Clearly \u304b\u3089\u30ce\u30fc\u30c8\u3092\u958b\u304f\u969b\u3001\u7279\u5b9a\u306e Evernote \u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u3092\u4f7f\u7528\u3002"
+   },
+   "options__message__related_notes" : {
+      "message" : "\u30a2\u30ab\u30a6\u30f3\u30c8\u5185\u304b\u3089\u8868\u793a\u5185\u5bb9\u306b\u95a2\u9023\u3057\u3066\u3044\u305d\u3046\u306a\u30af\u30ea\u30c3\u30d7\u3092\u8868\u793a\u200b\u200b\u3002"
+   },
+   "options__message__saved" : {
+      "message" : "Clearly \u3092\u4f7f\u3063\u305f\u65b0\u3057\u3044\u30bf\u30d6\u3059\u3079\u3066\u306b\u8a2d\u5b9a\u304c\u53cd\u6620\u3055\u308c\u307e\u3059"
+   },
+   "options__message__smart_filing" : {
+      "message" : "\u30af\u30ea\u30c3\u30d7\u306e\u4fdd\u5b58\u5148\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u3001\u4ed8\u3051\u308b\u3068\u3088\u3044\u30bf\u30b0\u3092\u81ea\u52d5\u7684\u306b\u5224\u5225\u3002"
+   },
+   "options__message__tags" : {
+      "message" : "Evernote \u306b\u30af\u30ea\u30c3\u30d7\u3059\u308b\u3068\u9069\u7528\u3055\u308c\u308b\u30bf\u30b0\u3002"
+   },
+   "options__open_notes_in__desktop__label" : {
+      "message" : "\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\u30af\u30e9\u30a4\u30a2\u30f3\u30c8"
+   },
+   "options__open_notes_in__web__label" : {
+      "message" : "Web \u30af\u30e9\u30a4\u30a2\u30f3\u30c8"
+   },
+   "options__related_notes__disabled__label" : {
+      "message" : "\u95a2\u9023\u30ce\u30fc\u30c8\u3092\u7121\u52b9\u5316"
+   },
+   "options__related_notes__enabled__label" : {
+      "message" : "\u95a2\u9023\u30ce\u30fc\u30c8\u3092\u6709\u52b9\u5316"
+   },
+   "options__related_notes__just_at_bottom__label" : {
+      "message" : "\u95a2\u9023\u30ce\u30fc\u30c8\u3092\u6709\u52b9\u5316\uff08\u4e0b\u90e8\u306b\u306e\u307f\u8868\u793a\uff09"
+   },
+   "options__smart_filing__disabled__label" : {
+      "message" : "\u30b9\u30de\u30fc\u30c8\u30d5\u30a1\u30a4\u30ea\u30f3\u30b0\u3092\u7121\u52b9\u5316"
+   },
+   "options__smart_filing__enabled__label" : {
+      "message" : "\u30b9\u30de\u30fc\u30c8\u30d5\u30a1\u30a4\u30ea\u30f3\u30b0\u3092\u6709\u52b9\u5316"
+   },
+   "options__smart_filing__just_notebooks__label" : {
+      "message" : "\u30b9\u30de\u30fc\u30c8\u30d5\u30a1\u30a4\u30ea\u30f3\u30b0\u3092\u6709\u52b9\u5316\uff08\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u306e\u307f\uff09"
+   },
+   "options__smart_filing__just_tags__label" : {
+      "message" : "\u30b9\u30de\u30fc\u30c8\u30d5\u30a1\u30a4\u30ea\u30f3\u30b0\u3092\u6709\u52b9\u5316\uff08\u30bf\u30b0\u306e\u307f\uff09"
+   },
+   "options__smart_filing_for_business__label" : {
+      "message" : "\u30d3\u30b8\u30cd\u30b9\u30ce\u30fc\u30c8\u30d6\u30c3\u30af\u3067\u30b9\u30de\u30fc\u30c8\u30d5\u30a1\u30a4\u30eb\u6a5f\u80fd\u3092\u8a31\u53ef"
+   },
+   "options__speech_demo__label" : {
+      "message" : "\u30c7\u30e2"
+   },
+   "options__speech_gender__label" : {
+      "message" : "\u8aad\u307f\u4e0a\u3052\u306e\u58f0"
+   },
+   "options__speech_speed__label" : {
+      "message" : "\u8aad\u307f\u4e0a\u3052\u901f\u5ea6"
+   },
+   "options__text_align__label" : {
+      "message" : "\u30c6\u30ad\u30b9\u30c8\u63c3\u3048"
+   },
+   "options__text_font__label" : {
+      "message" : "\u672c\u6587\u30d5\u30a9\u30f3\u30c8"
+   },
+   "options__text_font_header__label" : {
+      "message" : "\u898b\u51fa\u3057\u30d5\u30a9\u30f3\u30c8"
+   },
+   "options__text_font_monospace__label" : {
+      "message" : "\u7b49\u5e45\u30d5\u30a9\u30f3\u30c8"
+   },
+   "options__text_line_height__label" : {
+      "message" : "\u884c\u306e\u9ad8\u3055"
+   },
+   "options__text_size__label" : {
+      "message" : "\u57fa\u672c\u30d5\u30a9\u30f3\u30c8\u30b5\u30a4\u30ba"
+   },
+   "options__title__custom" : {
+      "message" : "\u30ab\u30b9\u30bf\u30e0\u30c6\u30fc\u30de"
+   },
+   "options__title__features" : {
+      "message" : "Clearly \u6a5f\u80fd"
+   },
+   "options__title__general" : {
+      "message" : "\u30aa\u30d7\u30b7\u30e7\u30f3"
+   },
+   "options__title__page" : {
+      "message" : "Clearly \/ \u8a2d\u5b9a"
+   },
+   "options__title__speech" : {
+      "message" : "\u30c6\u30ad\u30b9\u30c8\u8aad\u307f\u4e0a\u3052"
+   },
+   "options__title__sub__account" : {
+      "message" : "\u30a2\u30ab\u30a6\u30f3\u30c8"
+   },
+   "options__title__sub__keyboard" : {
+      "message" : "\u30ad\u30fc\u30dc\u30fc\u30c9\u30b7\u30e7\u30fc\u30c8\u30ab\u30c3\u30c8"
+   },
+   "options__title__sub__notebook" : {
+      "message" : "\u30ce\u30fc\u30c8\u30d6\u30c3\u30af"
+   },
+   "options__title__sub__open_notes_in" : {
+      "message" : "\u30ce\u30fc\u30c8\u3092\u958b\u304f:"
+   },
+   "options__title__sub__related_notes" : {
+      "message" : "\u95a2\u9023\u3059\u308b\u30ce\u30fc\u30c8"
+   },
+   "options__title__sub__smart_filing" : {
+      "message" : "\u30b9\u30de\u30fc\u30c8\u30d5\u30a1\u30a4\u30ea\u30f3\u30b0"
+   },
+   "options__title__sub__tags" : {
+      "message" : "\u30bf\u30b0"
+   },
+   "options__values__base__Blueprint" : {
+      "message" : "Blueprint"
+   },
+   "options__values__base__None" : {
+      "message" : "\u306a\u3057"
+   },
+   "options__values__base__Theme_1" : {
+      "message" : "Classic"
+   },
+   "options__values__base__Theme_2" : {
+      "message" : "Modern"
+   },
+   "options__values__base__Theme_3" : {
+      "message" : "Night-time"
+   },
+   "options__values__footnote_links__Always" : {
+      "message" : "\u5e38\u306b\u8868\u793a"
+   },
+   "options__values__footnote_links__Never" : {
+      "message" : "\u8868\u793a\u3057\u306a\u3044"
+   },
+   "options__values__footnote_links__On_Print" : {
+      "message" : "\u5370\u5237\u306e\u969b"
+   },
+   "options__values__large_graphics__Do_Nothing" : {
+      "message" : "\u5e38\u306b\u8868\u793a"
+   },
+   "options__values__large_graphics__Hide_Always" : {
+      "message" : "\u5e38\u306b\u975e\u8868\u793a"
+   },
+   "options__values__large_graphics__Hide_on_Print" : {
+      "message" : "\u5370\u5237\u6642\u306f\u975e\u8868\u793a"
+   },
+   "options__values__menu_placement__Bottom_Right" : {
+      "message" : "\u53f3\u4e0b"
+   },
+   "options__values__menu_placement__Top_Right" : {
+      "message" : "\u53f3\u4e0a"
+   },
+   "options__values__speech_gender__default" : {
+      "message" : "\u898f\u5b9a"
+   },
+   "options__values__speech_gender__female" : {
+      "message" : "\u5973\u6027\uff08\u5229\u7528\u53ef\u80fd\u306a\u5834\u5408\uff09"
+   },
+   "options__values__speech_gender__male" : {
+      "message" : "\u7537\u6027\uff08\u5229\u7528\u53ef\u80fd\u306a\u5834\u5408\uff09"
+   },
+   "options__values__speech_speed__fast" : {
+      "message" : "\u901f\u304f"
+   },
+   "options__values__speech_speed__faster" : {
+      "message" : "\u3084\u3084\u901f\u304f"
+   },
+   "options__values__speech_speed__fastest" : {
+      "message" : "\u6700\u3082\u901f\u304f"
+   },
+   "options__values__speech_speed__normal" : {
+      "message" : "\u901a\u5e38"
+   },
+   "options__values__speech_speed__slow" : {
+      "message" : "\u3086\u3063\u304f\u308a"
+   },
+   "options__values__speech_speed__slower" : {
+      "message" : "\u3084\u3084\u3086\u3063\u304f\u308a"
+   },
+   "options__values__speech_speed__slowest" : {
+      "message" : "\u6700\u3082\u3086\u3063\u304f\u308a"
+   },
+   "options__values__text_align__Justified" : {
+      "message" : "\u4e21\u7aef\u63c3\u3048"
+   },
+   "options__values__text_align__Normal" : {
+      "message" : "\u901a\u5e38"
+   }
+}

@@ -1,0 +1,572 @@
+{
+   "chrome_browser_action" : {
+      "message" : "Vezi aceast\u0103 pagin\u0103 \u00een Clearly"
+   },
+   "chrome_context_menu" : {
+      "message" : "Clearly"
+   },
+   "firefox_button" : {
+      "message" : "Clearly"
+   },
+   "firefox_button_tooltip" : {
+      "message" : "Vezi aceast\u0103 pagin\u0103 cu Clearly."
+   },
+   "firefox_context_menu" : {
+      "message" : "Clearly"
+   },
+   "firefox_menu" : {
+      "message" : "Clearly"
+   },
+   "inside__blank_error__body" : {
+      "message" : "Clearly este \u00een prezent proiectat s\u0103 func\u021bioneze pe paginile de articol. O pagin\u0103 de articol este orice pagin\u0103 care con\u021bine un bloc mare de text - cum ar fi, de exemplu, un articol de ziar sau post pe blog."
+   },
+   "inside__blank_error__heading" : {
+      "message" : "Sfaturi pentru utilizarea Evernote Clearly"
+   },
+   "inside__evernote_clipping" : {
+      "message" : "Se ata\u0219eaz\u0103..."
+   },
+   "inside__evernote_clipping_failed" : {
+      "message" : "Decuparea a e\u0219uat."
+   },
+   "inside__evernote_login__button_cancel__label" : {
+      "message" : "Anulare"
+   },
+   "inside__evernote_login__button_do__label" : {
+      "message" : "\u00cenregistrare"
+   },
+   "inside__evernote_login__create_account" : {
+      "message" : "Creaz\u0103 un cont"
+   },
+   "inside__evernote_login__general__error" : {
+      "message" : "Autentificarea a e\u0219uat."
+   },
+   "inside__evernote_login__heading" : {
+      "message" : "Conecta\u0163i-v\u0103 la Evernote"
+   },
+   "inside__evernote_login__password__error__format" : {
+      "message" : "Parola con\u021bine caractere nepermise."
+   },
+   "inside__evernote_login__password__error__invalid" : {
+      "message" : "Numele de utilizator \u0219i parola nu se potrivesc cu utilizatorul existent."
+   },
+   "inside__evernote_login__password__error__length" : {
+      "message" : "Parola trebuie s\u0103 aibe \u00eentre 6 \u0219i 64 de caractere lungime."
+   },
+   "inside__evernote_login__password__error__required" : {
+      "message" : "Este necesar\u0103 o parol\u0103."
+   },
+   "inside__evernote_login__password__error__reset" : {
+      "message" : "Parola dvs. a expirat. V\u0103 rug\u0103m s\u0103 o reseta\u021bi acum."
+   },
+   "inside__evernote_login__password__error__timeout" : {
+      "message" : "Sesiunea de autentificare este temporizat\u0103. V\u0103 rug\u0103m s\u0103 \u00eencerca\u021bi din nou."
+   },
+   "inside__evernote_login__password__label" : {
+      "message" : "Parol\u0103"
+   },
+   "inside__evernote_login__rememberMe__label" : {
+      "message" : "\u021aine-m\u0103 minte"
+   },
+   "inside__evernote_login__spinner" : {
+      "message" : "Conectare la Evernote"
+   },
+   "inside__evernote_login__username__error__format" : {
+      "message" : "Numele de utilizator con\u021bine caractere nepermise."
+   },
+   "inside__evernote_login__username__error__invalid" : {
+      "message" : "Nu este un utilizator valid, activ."
+   },
+   "inside__evernote_login__username__error__length" : {
+      "message" : "Numele de utilizator trebuie s\u0103 aibe \u00eentre 1 \u0219i 64 caractere lungime."
+   },
+   "inside__evernote_login__username__error__required" : {
+      "message" : "Este necesar un nume de utilizator."
+   },
+   "inside__evernote_login__username__label" : {
+      "message" : "Nume de utilizator sau adresa de email Evernote "
+   },
+   "inside__evernote_two_factor__button_do__label" : {
+      "message" : "Continua\u0163i"
+   },
+   "inside__evernote_two_factor__button_help__label" : {
+      "message" : "Am nevoie de ajutor pentru a ob\u021bine un cod de verificare"
+   },
+   "inside__evernote_two_factor__code__error__format" : {
+      "message" : "Codul de verificare ar trebui s\u0103 fie doar cifre."
+   },
+   "inside__evernote_two_factor__code__error__invalid" : {
+      "message" : "Codul de verificare este incorect."
+   },
+   "inside__evernote_two_factor__code__error__length" : {
+      "message" : "Codul de verificare trebuie s\u0103 fie de cel pu\u021bin 6 caractere."
+   },
+   "inside__evernote_two_factor__code__error__required" : {
+      "message" : "Este necesar codul de verificare."
+   },
+   "inside__evernote_two_factor__code__label" : {
+      "message" : "cod din 6 cifre"
+   },
+   "inside__evernote_two_factor__message__google" : {
+      "message" : "Introduce\u021bi codul de verificare afi\u0219at \u00een aplica\u021bia Google Authenticator."
+   },
+   "inside__evernote_two_factor__message__sms" : {
+      "message" : "Am trimis un mesaj text cu un cod de verificare la"
+   },
+   "inside__features__clipping__text" : {
+      "message" : "Salva\u021bi ceea ce citi\u021bi \u00een  contul dvs. Evernote cu un singur clic. Accesa\u021bi clipuri de pe orice dispozitiv, oric\u00e2nd, \u00een Evernote."
+   },
+   "inside__features__clipping__title" : {
+      "message" : "Decupa\u021bi si trimite\u0163i c\u0103tre Evernote"
+   },
+   "inside__features__close2" : {
+      "message" : "\u00cenchide"
+   },
+   "inside__features__eula_notice" : {
+      "message" : "Prin folosirea Clearly, sunte\u021bi de acord cu [EULA =]."
+   },
+   "inside__features__highlighting__text" : {
+      "message" : "Eviden\u021bia\u021bi textul pe care dori\u021bi s\u0103 vi-l aminti\u021bi \u0219i g\u0103si\u021bi-l rapid o \u00een contul dvs. Evernote. Eviden\u021bierea modific\u0103rilor pe care le face\u021bi \u00een Clearly va fi actualizat\u0103 automat \u00een contul dvs. Evernote."
+   },
+   "inside__features__highlighting__title" : {
+      "message" : "Eviden\u021biere"
+   },
+   "inside__features__related_notes__text" : {
+      "message" : "Redescoperi magic notele din contul dvs. Evernote, care sunt legate de pagina pe care o vizualiza\u021bi. Notele relative sunt afi\u0219ate \u00een partea de jos a articolului sau pe partea dreapt\u0103, dac\u0103 spa\u021biul o permite."
+   },
+   "inside__features__related_notes__title" : {
+      "message" : "Note relative"
+   },
+   "inside__features__smart_filing__text" : {
+      "message" : "Atribuie automat etichetele la clipurile Web  \u0219i le salveaz\u0103 \u00een notebook-urile corespunz\u0103toare, astfel \u00eenc\u00e2t s\u0103 nu trebuias\u0103 s\u0103 o face\u021bi dumneavoastr\u0103."
+   },
+   "inside__features__smart_filing__title" : {
+      "message" : "Umplere inteligent\u0103"
+   },
+   "inside__features__speech__no_language_explanation" : {
+      "message" : "Evernote Clearly nu a putut determina limba acestui articol. Dac\u0103 recunoa\u0219te\u021bi limba, selecta\u021bi-o mai jos si vom reda."
+   },
+   "inside__features__speech__no_language_title" : {
+      "message" : "Limba nu este acceptat\u0103"
+   },
+   "inside__features__speech__text" : {
+      "message" : "A\u0219eza\u021bi-v\u0103 \u0219i l\u0103sa\u021bi Clearly s\u0103 v\u0103 citeasc\u0103 mesajele din blog, articole, pagini web, etc. mul\u021bumit\u0103 noii facilit\u0103\u021bi Text 2 Speech, disponibil\u0103 exclusiv pentru abona\u021bii Premium Evernote."
+   },
+   "inside__features__speech__text__available" : {
+      "message" : "Text to Speech \u00een 21 de limbi:"
+   },
+   "inside__features__speech__text__available_languages" : {
+      "message" : "Englez\u0103, japonez\u0103, spaniol\u0103, francez\u0103, german\u0103, chinez\u0103, coreean\u0103, arab\u0103, ceh\u0103, danez\u0103, olandez\u0103, finlandez\u0103, greac\u0103, maghiar\u0103, italian\u0103, norvegian\u0103, polonez\u0103, portughez\u0103, rus\u0103, suedez\u0103 \u0219i turc\u0103."
+   },
+   "inside__features__speech__text__cancel" : {
+      "message" : "Anulare"
+   },
+   "inside__features__speech__text__language" : {
+      "message" : "Limba nu este acceptat\u0103"
+   },
+   "inside__features__speech__text__play" : {
+      "message" : "Red\u0103 folosind aceast\u0103 limb\u0103"
+   },
+   "inside__features__speech__text__powered" : {
+      "message" : "Evernote Clearly folose\u0219te [= serviciu]."
+   },
+   "inside__features__speech__text__requires" : {
+      "message" : "Cerin\u021be [= produs]."
+   },
+   "inside__features__speech__text__try" : {
+      "message" : "\u00cencerca\u021bi Text to Speech"
+   },
+   "inside__features__speech__text__upgrade" : {
+      "message" : "Actualizeaz\u0103 la Evernote Premium"
+   },
+   "inside__features__speech__title" : {
+      "message" : "Text to Speech"
+   },
+   "inside__features__title__all" : {
+      "message" : "Bine a\u021bi venit la noul Evernote Clearly"
+   },
+   "inside__features__title__new" : {
+      "message" : "Ave\u021bi o nou\u0103 versiune a Evernote Clearly"
+   },
+   "inside__filing_info__default_notebook" : {
+      "message" : "Notebook-ul implicit"
+   },
+   "inside__filing_info__edit" : {
+      "message" : "Modific\u0103"
+   },
+   "inside__filing_info__sentence" : {
+      "message" : "Decupat \u00een [= notebook] notebook, \u0219i etichetat cu [=tags]."
+   },
+   "inside__filing_info__sentence_and" : {
+      "message" : "\u0219i"
+   },
+   "inside__filing_info__sentence_no_tags" : {
+      "message" : "Decupat \u00een notebook-ul [= notebook]."
+   },
+   "inside__filing_info__sentence_other_tags" : {
+      "message" : "alte etichete"
+   },
+   "inside__filing_info__title_normal" : {
+      "message" : "Arhivat \u00een:"
+   },
+   "inside__filing_info__title_smart" : {
+      "message" : "Arhivat inteligent \u00een:"
+   },
+   "inside__filing_info__view" : {
+      "message" : "Vizualizare"
+   },
+   "inside__menu__clip_to_evernote__tooltip" : {
+      "message" : "Clip la Evernote."
+   },
+   "inside__menu__close__tooltip" : {
+      "message" : "Ascunde\u021bi suprapunerea."
+   },
+   "inside__menu__fitts__tooltip" : {
+      "message" : "Ascunde\u021bi suprapunerea."
+   },
+   "inside__menu__highlight_to_evernote__tooltip" : {
+      "message" : "Eviden\u021bia\u021bi."
+   },
+   "inside__menu__print__tooltip" : {
+      "message" : "Imprim\u0103"
+   },
+   "inside__menu__settings__tooltip" : {
+      "message" : "Arat\u0103Teme."
+   },
+   "inside__menu__speak__forward__tooltip" : {
+      "message" : "Mergi \u00eenainte"
+   },
+   "inside__menu__speak__pause__tooltip" : {
+      "message" : "Pauz\u0103"
+   },
+   "inside__menu__speak__play__tooltip" : {
+      "message" : "Red\u0103"
+   },
+   "inside__menu__speak__rewind__tooltip" : {
+      "message" : "Spre \u00eenapoi"
+   },
+   "inside__menu__speak__tooltip" : {
+      "message" : "Text to Speech"
+   },
+   "inside__misc__page" : {
+      "message" : "pagin\u0103"
+   },
+   "inside__related_notes__disable_long" : {
+      "message" : "Vre\u021bi s\u0103 dezactiva\u021bi notele relative?"
+   },
+   "inside__related_notes__disable_short" : {
+      "message" : "Dezactiva\u021bi?"
+   },
+   "inside__related_notes__title" : {
+      "message" : "Note relative"
+   },
+   "inside__rtl__ltr__label" : {
+      "message" : "St\u00e2nga la dreapta"
+   },
+   "inside__rtl__main__label" : {
+      "message" : "Direc\u021bia textului?"
+   },
+   "inside__rtl__rtl__label" : {
+      "message" : "De la dreapta la st\u00e2nga"
+   },
+   "inside__settings__fontSize__large" : {
+      "message" : "mare"
+   },
+   "inside__settings__fontSize__medium" : {
+      "message" : "mediu"
+   },
+   "inside__settings__fontSize__small" : {
+      "message" : "mic"
+   },
+   "inside__settings__theme__1" : {
+      "message" : "H\u00e2rtie de ziar"
+   },
+   "inside__settings__theme__2" : {
+      "message" : "Notabil"
+   },
+   "inside__settings__theme__3" : {
+      "message" : "Bufni\u021b\u0103"
+   },
+   "inside__settings__theme__custom" : {
+      "message" : "Particular"
+   },
+   "meta_extension_author" : {
+      "message" : "Evernote Corp."
+   },
+   "meta_extension_description" : {
+      "message" : "Clearly face post\u0103ri pe blog, articole \u0219i pagini web curate \u0219i u\u0219or de citit. Salva\u021bi-le la Evernote pentru a le citi oriunde."
+   },
+   "meta_extension_name" : {
+      "message" : "Clearly"
+   },
+   "options__account__sign_out" : {
+      "message" : "Permanent conectat ca [[= nume de utilizator]]."
+   },
+   "options__account__sign_out_link" : {
+      "message" : "Deconectare"
+   },
+   "options__account__signed_out" : {
+      "message" : "Nu sunte\u021bi conectat permanent. Face\u021bi clic pe pictograma Evernote, \u00een bara lateral\u0103 Clearly, pentru a v\u0103 conecta"
+   },
+   "options__base__label" : {
+      "message" : "Baza CSS"
+   },
+   "options__box_width__label" : {
+      "message" : "L\u0103\u021bimea Liniei"
+   },
+   "options__button__more_options" : {
+      "message" : "Mai multe optiuni"
+   },
+   "options__button__reset_custom" : {
+      "message" : "Resetare"
+   },
+   "options__button__save_custom" : {
+      "message" : "Salva\u021bi Tema"
+   },
+   "options__button__save_general" : {
+      "message" : "Salvare op\u021biuni"
+   },
+   "options__clip_notebook__business" : {
+      "message" : "Notebook-uri Business"
+   },
+   "options__clip_notebook__no__label" : {
+      "message" : "Folosi\u021bi notebook-ul Implicit"
+   },
+   "options__clip_notebook__shared" : {
+      "message" : "Notebook-uri partajate"
+   },
+   "options__clip_notebook__yes__label" : {
+      "message" : "Utiliza\u021bi acest Notebook"
+   },
+   "options__clip_notebook__your" : {
+      "message" : "Notebook-urile dvs."
+   },
+   "options__clip_tag__no__label" : {
+      "message" : "Nu eticheta\u021bi"
+   },
+   "options__clip_tag__yes__label" : {
+      "message" : "etichetat cu"
+   },
+   "options__color_background__label" : {
+      "message" : "Culoare fundal"
+   },
+   "options__color_links__label" : {
+      "message" : "Culoare Linkuri"
+   },
+   "options__color_text__label" : {
+      "message" : "Culoare prim-plan"
+   },
+   "options__custom_css__label" : {
+      "message" : "CSS personalizat"
+   },
+   "options__footnote_links__label" : {
+      "message" : "Link-uri ca note de subsol"
+   },
+   "options__keys_activation__label" : {
+      "message" : "Vezi pagina \u00een Clearly"
+   },
+   "options__keys_clip__label" : {
+      "message" : "Decupa\u021bi si trimite\u0163i c\u0103tre Evernote"
+   },
+   "options__keys_highlight__label" : {
+      "message" : "Eviden\u021bia\u021bi"
+   },
+   "options__keys_speech__label" : {
+      "message" : "Text to Speech"
+   },
+   "options__large_graphics__label" : {
+      "message" : "Grafica mare"
+   },
+   "options__message__keys" : {
+      "message" : "Pentru a schimba, plasa\u021bi cursorul \u00een c\u00e2mp \u0219i ap\u0103sa\u021bi asocierea de taste de pe tastatur\u0103."
+   },
+   "options__message__keys_firefox" : {
+      "message" : "Reporni\u021bi browser-ul dvs., dup\u0103 salvare."
+   },
+   "options__message__notebook" : {
+      "message" : "Notebook pentru decupat, atunci c\u00e2nd trimite\u021bi la Evernote."
+   },
+   "options__message__open_notes_in" : {
+      "message" : "C\u00e2nd se deschid note din Clearly, utiliza\u021bi un anumit client Evernote."
+   },
+   "options__message__related_notes" : {
+      "message" : "Las\u0103 Evernote s\u0103 descarce clipuri din contul dvs. care ar putea fi relevante pentru ceea ce citi\u021bi acum."
+   },
+   "options__message__saved" : {
+      "message" : "Set\u0103ri vor fi \u00een vigoare la orice file noi pe care le utiliza\u021bi cu Clearly."
+   },
+   "options__message__smart_filing" : {
+      "message" : "Las\u0103 Evernote s\u0103 determine ce clipuri de notebook ar trebui s\u0103 mearg\u0103, \u0219i ce etichete ar trebui s\u0103 ob\u021bin\u0103."
+   },
+   "options__message__tags" : {
+      "message" : "Etichete de aplicat, atunci c\u00e2nd deta\u0219a\u021bi la Evernote."
+   },
+   "options__open_notes_in__desktop__label" : {
+      "message" : "Spa\u021biul de lucru client"
+   },
+   "options__open_notes_in__web__label" : {
+      "message" : "Web client"
+   },
+   "options__related_notes__disabled__label" : {
+      "message" : "Dezactiva\u021bi notele aferente"
+   },
+   "options__related_notes__enabled__label" : {
+      "message" : "Activa\u021bi notele aferente"
+   },
+   "options__related_notes__just_at_bottom__label" : {
+      "message" : "Activa\u021bi notele aferente, dar afi\u0219a\u021bi numai \u00een partea de jos"
+   },
+   "options__smart_filing__disabled__label" : {
+      "message" : "Dezactiva\u021bi Depunerea inteligent\u0103"
+   },
+   "options__smart_filing__enabled__label" : {
+      "message" : "Activa\u021bi Depunerea inteligent\u0103"
+   },
+   "options__smart_filing__just_notebooks__label" : {
+      "message" : "Activeaz\u0103 umplerea inteligent\u0103, dar doar pentru Notebook-uri"
+   },
+   "options__smart_filing__just_tags__label" : {
+      "message" : "Activeaz\u0103 umplerea inteligent\u0103, dar doar pentru etichete"
+   },
+   "options__smart_filing_for_business__label" : {
+      "message" : "Permite\u021bi Depunerea inteligent\u0103 \u00een Business Notebooks"
+   },
+   "options__speech_demo__label" : {
+      "message" : "Demo"
+   },
+   "options__speech_gender__label" : {
+      "message" : "Lectur\u0103 vocal\u0103"
+   },
+   "options__speech_speed__label" : {
+      "message" : "Viteza de citire"
+   },
+   "options__text_align__label" : {
+      "message" : "Aliniere Text"
+   },
+   "options__text_font__label" : {
+      "message" : "Font liter\u0103"
+   },
+   "options__text_font_header__label" : {
+      "message" : "Font Antet "
+   },
+   "options__text_font_monospace__label" : {
+      "message" : "Font Monospace "
+   },
+   "options__text_line_height__label" : {
+      "message" : "\u00cen\u0103l\u021bimea Liniei"
+   },
+   "options__text_size__label" : {
+      "message" : "Dimensiunea fontului bazei "
+   },
+   "options__title__custom" : {
+      "message" : "Tema personalizat\u0103"
+   },
+   "options__title__features" : {
+      "message" : "Caracteristici Clearly"
+   },
+   "options__title__general" : {
+      "message" : "Op\u021biuni"
+   },
+   "options__title__page" : {
+      "message" : "Clearly \/ Op\u021biuni"
+   },
+   "options__title__speech" : {
+      "message" : "Text to Speech"
+   },
+   "options__title__sub__account" : {
+      "message" : "Cont"
+   },
+   "options__title__sub__keyboard" : {
+      "message" : "Scurt\u0103turi de la tastatur\u0103"
+   },
+   "options__title__sub__notebook" : {
+      "message" : "Notebook"
+   },
+   "options__title__sub__open_notes_in" : {
+      "message" : "Deschide note \u00een"
+   },
+   "options__title__sub__related_notes" : {
+      "message" : "Note relative"
+   },
+   "options__title__sub__smart_filing" : {
+      "message" : "Umplere inteligent\u0103"
+   },
+   "options__title__sub__tags" : {
+      "message" : "Etichete"
+   },
+   "options__values__base__Blueprint" : {
+      "message" : "Blueprint"
+   },
+   "options__values__base__None" : {
+      "message" : "Nici"
+   },
+   "options__values__base__Theme_1" : {
+      "message" : "Clasic"
+   },
+   "options__values__base__Theme_2" : {
+      "message" : "Modern"
+   },
+   "options__values__base__Theme_3" : {
+      "message" : "Pe timp de noapte"
+   },
+   "options__values__footnote_links__Always" : {
+      "message" : "\u00centotdeauna"
+   },
+   "options__values__footnote_links__Never" : {
+      "message" : "Niciodat\u0103"
+   },
+   "options__values__footnote_links__On_Print" : {
+      "message" : "Imprim\u0103"
+   },
+   "options__values__large_graphics__Do_Nothing" : {
+      "message" : "Afi\u0219a\u021bi \u00eentotdeauna"
+   },
+   "options__values__large_graphics__Hide_Always" : {
+      "message" : "Ascunde\u021bi \u00eentotdeauna"
+   },
+   "options__values__large_graphics__Hide_on_Print" : {
+      "message" : "Ascunde\u021bi la Imprimare"
+   },
+   "options__values__menu_placement__Bottom_Right" : {
+      "message" : "Dreapta jos"
+   },
+   "options__values__menu_placement__Top_Right" : {
+      "message" : "Dreapta sus"
+   },
+   "options__values__speech_gender__default" : {
+      "message" : "Implicit"
+   },
+   "options__values__speech_gender__female" : {
+      "message" : "Feminin (dac\u0103 este disponibil)"
+   },
+   "options__values__speech_gender__male" : {
+      "message" : "Masculin (dac\u0103 este disponibil)"
+   },
+   "options__values__speech_speed__fast" : {
+      "message" : "Rapid"
+   },
+   "options__values__speech_speed__faster" : {
+      "message" : "Mai repede"
+   },
+   "options__values__speech_speed__fastest" : {
+      "message" : "Cel mai rapid"
+   },
+   "options__values__speech_speed__normal" : {
+      "message" : "Normal"
+   },
+   "options__values__speech_speed__slow" : {
+      "message" : "Lent"
+   },
+   "options__values__speech_speed__slower" : {
+      "message" : "Mai lent"
+   },
+   "options__values__speech_speed__slowest" : {
+      "message" : "Cel mai lent"
+   },
+   "options__values__text_align__Justified" : {
+      "message" : "Justified"
+   },
+   "options__values__text_align__Normal" : {
+      "message" : "Normal"
+   }
+}
