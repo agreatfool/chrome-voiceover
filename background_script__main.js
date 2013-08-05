@@ -86,7 +86,7 @@
 +	"_l.setAttribute('src', 'chrome-extension://iooicodkiihhpojmmeghjclgihfjdjhj/js/__bookmarklet_to_inject"+(__clip_on_launch ? "__andClipOnLaunch" : (__highlight_on_launch ? "__andHighlightOnLaunch" : (__speak_on_launch ? "__andSpeakOnLaunch" : "")))+".js');"
 +	"_l.className = 'bookmarklet_launch';"
 +	"_b.appendChild(_l);"
-					});
+					}, function() { voiceover.convertListener(); });
 			});
 		};
 
@@ -5726,5 +5726,85 @@ Object.preventExtensions(UsageMetricsManager);
             _doCallback(true);
         };
         
-})();        
-    
+})();
+
+    //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+    //-* SELF DEFINED
+    //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+    var VoiceOver = function() {
+        this.responseFunc = null; // response function to communicate with "content.js"
+        this.whiteList = [
+            "chrome://", "taobao.com", "tmall.com", "jd.com"
+        ];
+    };
+
+    /**
+     * Register one response function to communicate with "content.js".
+     * @param {Function} func
+     */
+    VoiceOver.registerResponseFunc = function(func) {
+        this.responseFunc = func;
+        VoiceOver.log('[backend] registerResponseFunc registered!');
+    };
+
+    /**
+     * Triggered when page dom loaded, start to convert page to simple format.
+     *
+     * @param {Object} request json request message
+     * @param {Object} sender http://developer.chrome.com/extensions/runtime.html#type-MessageSender
+     * @param {Function} sendResponse
+     */
+    VoiceOver.prototype.readyListener = function(request, sender, sendResponse) {
+        if (!(request.hasOwnProperty("action") && request.action == "convert")) {
+            VoiceOver.log('[backend] readyListener: request format invalid!');
+            return; // request not defined by "VoiceOver", skip it
+        }
+        if (!sender.hasOwnProperty("tab")) {
+            VoiceOver.log('[backend] readyListener: request not from a valid tab!');
+            return; // request sender is an valid tab, skip it
+        }
+
+        for (var url in this.whiteList) {
+            if (-1 != sender.tab.url.indexOf(url)) {
+                VoiceOver.log('[backend] readyListener: url in the white list, do not convert!');
+                VoiceOver.log('[backend] white list:');
+                VoiceOver.log(this.whiteList);
+                return; // target tab is in the url white list, do not convert it
+            }
+        }
+
+        // register response function
+        this.registerResponseFunc(sendResponse);
+        // convert page
+        __readable_by_evernote.__common_launch();
+    };
+
+    /**
+     * Triggered when page convert done.
+     */
+    VoiceOver.prototype.convertListener = function() {
+        VoiceOver.log('[backend] convert done!');
+        this.responseFunc({
+            status: "done"
+        });
+    };
+
+    /**
+     * Send log message to front "content.js" to log.
+     * @param msg
+     */
+    VoiceOver.log = function(msg) {
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, {msg: msg});
+        });
+    };
+
+    var voiceover = new VoiceOver();
+
+    /**
+     * Event lister of "content.js".
+     */
+    chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+        voiceover.readyListener(request, sender, sendResponse);
+        VoiceOver.log('[backend] readyListener registered!');
+    });

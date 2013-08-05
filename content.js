@@ -1120,4 +1120,68 @@
         })();
         
     
-    
+    //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+    //-* SELF DEFINED
+    //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+    var VoiceOver = function() {
+        this.converting = false;
+        this.init();
+        this.registerBackgroundMessage();
+    };
+
+    VoiceOver.prototype.init = function() {
+        $('body').append(
+            '<audio id="VoiceOverFinished" src="sound/finished.mp3" preload="true" autoplay="false" controls="false" loop="false"></audio>'
+        );
+        VoiceOver.log('audio resource attached!');
+    };
+
+    VoiceOver.prototype.registerBackgroundMessage = function() {
+        chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+            if (request.hasOwnProperty("msg") && request.msg != '' && request.msg != null) {
+                VoiceOver.log(request.msg);
+            }
+        });
+    };
+
+    VoiceOver.prototype.startConvert = function() {
+        VoiceOver.log('start to send convert request!');
+        var self = this;
+
+        if (self.converting) {
+            VoiceOver.log('page still converting, skip!');
+            return; // still converting, do nothing
+        }
+
+        self.converting = true; // mark status
+        chrome.runtime.sendMessage({action: "convert"}, function(response) {
+            if (response.hasOwnProperty("status") && response.status == "done") {
+                self.finishConvert();
+            }
+        });
+    };
+
+    VoiceOver.prototype.finishConvert = function() {
+        VoiceOver.log('page converted, continue...');
+        // convert done, mark status
+        this.converting = false;
+        // play finished sound
+        $('#VoiceOverFinished').play();
+    };
+
+    VoiceOver.log = function(msg) {
+        if (typeof msg != 'object' && typeof msg != 'function') {
+            console.log('[VoiceOver] ' + msg);
+        } else {
+            console.log('[VoiceOver]: ');
+            console.log(msg);
+        }
+    };
+
+    var voiceover = new VoiceOver();
+
+    $(document).ready(function() {
+        VoiceOver.log('DOM ready!');
+        // page dom loaded
+        voiceover.startConvert();
+    });
