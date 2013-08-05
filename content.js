@@ -1125,21 +1125,28 @@
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
     var VoiceOver = function() {
         this.converting = false;
-        this.init();
         this.registerBackgroundMessage();
     };
 
-    VoiceOver.prototype.init = function() {
-        $('body').append(
-            '<audio id="VoiceOverFinished" src="sound/finished.mp3" preload="true" autoplay="false" controls="false" loop="false"></audio>'
-        );
+    VoiceOver.prototype.playAudio = function() {
+        var audio = $('<audio id="VoiceOverFinished" src="" preload="true"></audio>');
+        audio.attr('src', chrome.extension.getURL("sound/finished.mp3"));
+
+        $('body').append(audio);
+        $('#VoiceOverFinished').get(0).play();
+
         VoiceOver.log('audio resource attached!');
     };
 
     VoiceOver.prototype.registerBackgroundMessage = function() {
+        var self = this;
         chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-            if (request.hasOwnProperty("msg") && request.msg != '' && request.msg != null) {
+            if (request.hasOwnProperty("msg")) {
+                // log message from background.js
                 VoiceOver.log(request.msg);
+            } else if (request.hasOwnProperty("finished") && true === request.finished) {
+                // page convert finished
+                self.finishConvert();
             }
         });
     };
@@ -1154,19 +1161,24 @@
         }
 
         self.converting = true; // mark status
-        chrome.runtime.sendMessage({action: "convert"}, function(response) {
-            if (response.hasOwnProperty("status") && response.status == "done") {
-                self.finishConvert();
-            }
-        });
+        chrome.runtime.sendMessage({action: "convert"}, function(response) {});
     };
 
     VoiceOver.prototype.finishConvert = function() {
         VoiceOver.log('page converted, continue...');
+
+        // TODO
+        // 根据id为loading的div是否处于显示状态，来检查页面上的悦读内容是否准备完成
+        // 准备完成后，将页面置换，并播放音效
+        // TODO
+        // 后续还需要快捷键来开关页面转换功能，就不需要每次到插件页面进行调整了
+        // 和快捷键来进行单词的页面转换
+        // 和快捷键来显示原页面
+
         // convert done, mark status
         this.converting = false;
-        // play finished sound
-        $('#VoiceOverFinished').play();
+        // play finished audio
+        this.playAudio();
     };
 
     VoiceOver.log = function(msg) {

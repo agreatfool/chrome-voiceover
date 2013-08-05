@@ -5736,19 +5736,9 @@ Object.preventExtensions(UsageMetricsManager);
     //-* SELF DEFINED
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
     var VoiceOver = function() {
-        this.responseFunc = null; // response function to communicate with "content.js"
         this.whiteList = [
             "chrome://", "taobao.com", "tmall.com", "jd.com", "xenojoshua.com"
         ];
-    };
-
-    /**
-     * Register one response function to communicate with "content.js".
-     * @param {Function} func
-     */
-    VoiceOver.prototype.registerResponseFunc = function(func) {
-        this.responseFunc = func;
-        VoiceOver.log('[backend] registerResponseFunc registered!');
     };
 
     /**
@@ -5778,8 +5768,6 @@ Object.preventExtensions(UsageMetricsManager);
             }
         }
 
-        // register response function
-        this.registerResponseFunc(sendResponse);
         // convert page
         __readable_by_evernote.__common_launch();
     };
@@ -5788,10 +5776,10 @@ Object.preventExtensions(UsageMetricsManager);
      * Triggered when page convert done.
      */
     VoiceOver.prototype.convertListener = function() {
-        this.responseFunc({
-            status: "done"
-        });
         VoiceOver.log('[backend] convert done!');
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            chrome.tabs.sendMessage(tabs[0].id, {finished: true});
+        });
     };
 
     /**

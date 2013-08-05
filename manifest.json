@@ -46,6 +46,7 @@
 
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
     "web_accessible_resources": [
+        "sound/finished.mp3",
         "blank.html", "blank.js", "frames/login.html", "frames/login_content.js", "frames/login_bulk.js",
         "js/target.js", "js/bulk.js", "js/__bookmarklet_to_inject.js", "js/__bookmarklet_to_inject__andClipOnLaunch.js",
         "js/__bookmarklet_to_inject__andHighlightOnLaunch.js", "js/__bookmarklet_to_inject__andSpeakOnLaunch.js",
