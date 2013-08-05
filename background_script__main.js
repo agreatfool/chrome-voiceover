@@ -46,6 +46,10 @@
 						chrome.tabs.update(_selected_tab.id, {'url': 'chrome-extension://iooicodkiihhpojmmeghjclgihfjdjhj/blank.html'});
 						return;
 					}
+
+                    if (_selected_tab.url.indexOf('chrome-devtools') !== -1) {
+                        return; // do nothing with dev ext page
+                    }
 				
 				//	inject script
 				//	=============
@@ -5742,7 +5746,7 @@ Object.preventExtensions(UsageMetricsManager);
      * Register one response function to communicate with "content.js".
      * @param {Function} func
      */
-    VoiceOver.registerResponseFunc = function(func) {
+    VoiceOver.prototype.registerResponseFunc = function(func) {
         this.responseFunc = func;
         VoiceOver.log('[backend] registerResponseFunc registered!');
     };
@@ -5764,9 +5768,10 @@ Object.preventExtensions(UsageMetricsManager);
             return; // request sender is an valid tab, skip it
         }
 
-        for (var url in this.whiteList) {
-            if (-1 != sender.tab.url.indexOf(url)) {
+        for (var index in this.whiteList) {
+            if (-1 !== sender.tab.url.indexOf(this.whiteList[index])) {
                 VoiceOver.log('[backend] readyListener: url in the white list, do not convert!');
+                VoiceOver.log('[backend] url: ' + sender.tab.url + ' , matched: ' + this.whiteList[index]);
                 VoiceOver.log('[backend] white list:');
                 VoiceOver.log(this.whiteList);
                 return; // target tab is in the url white list, do not convert it
@@ -5783,10 +5788,10 @@ Object.preventExtensions(UsageMetricsManager);
      * Triggered when page convert done.
      */
     VoiceOver.prototype.convertListener = function() {
-        VoiceOver.log('[backend] convert done!');
         this.responseFunc({
             status: "done"
         });
+        VoiceOver.log('[backend] convert done!');
     };
 
     /**
