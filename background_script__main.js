@@ -5738,7 +5738,7 @@ Object.preventExtensions(UsageMetricsManager);
     var VoiceOver = function() {
         this.responseFunc = null; // response function to communicate with "content.js"
         this.whiteList = [
-            "chrome://", "taobao.com", "tmall.com", "jd.com"
+            "chrome://", "taobao.com", "tmall.com", "jd.com", "xenojoshua.com"
         ];
     };
 
