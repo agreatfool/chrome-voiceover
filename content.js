@@ -1128,16 +1128,6 @@
         this.registerBackgroundMessage();
     };
 
-    VoiceOver.prototype.playAudio = function() {
-        var audio = $('<audio id="VoiceOverFinished" src="" preload="true"></audio>');
-        audio.attr('src', chrome.extension.getURL("sound/finished.mp3"));
-
-        $('body').append(audio);
-        $('#VoiceOverFinished').get(0).play();
-
-        VoiceOver.log('audio resource attached!');
-    };
-
     VoiceOver.prototype.registerBackgroundMessage = function() {
         var self = this;
         chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
@@ -1191,6 +1181,17 @@
             }
         }, 1000);
     };
+
+    VoiceOver.prototype.playAudio = function() {
+        if ($('#VoiceOverFinished').length == 0) {
+            // audio element does not exists on page
+            var audio = $('<audio id="VoiceOverFinished" src="" preload="true"></audio>');
+            audio.attr('src', chrome.extension.getURL("sound/finished.mp3"));
+            $('body').append(audio);
+        }
+        $('#VoiceOverFinished').get(0).play();
+
+        VoiceOver.log('audio resource attached!');
     };
 
     VoiceOver.log = function(msg) {
