@@ -1185,10 +1185,10 @@
             var audio = $('<audio id="VoiceOverFinished" src="" preload="true"></audio>');
             audio.attr('src', chrome.extension.getURL("sound/finished.mp3"));
             $('body').append(audio);
+            VoiceOver.log('audio resource attached!');
         }
         $('#VoiceOverFinished').get(0).play();
-
-        VoiceOver.log('audio resource attached!');
+        VoiceOver.log('finish audio playing!');
     };
 
     VoiceOver.log = function(msg) {
