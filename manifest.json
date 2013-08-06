@@ -13,7 +13,7 @@
         "128": "img/voicecall-128.png"
     },
 
-    "background": { 
+    "background": {
         "page": "background.html" 
     },
     
@@ -35,6 +35,20 @@
             "run_at": "document_end"
         }
     ],
+
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Alt+Shift+K"
+            }
+        },
+        "toggle-always-mode": {
+            "suggested_key": {
+                "default": "Alt+Shift+L"
+            },
+            "description": "Toggle VoiceOver always on"
+        }
+    },
     
     "permissions": [
         "unlimitedStorage", "management", "contextMenus", "cookies", "tabs", "notifications", "http://*/*", "https://*/*"

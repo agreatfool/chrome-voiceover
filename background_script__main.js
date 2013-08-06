@@ -5736,6 +5736,7 @@ Object.preventExtensions(UsageMetricsManager);
     //-* SELF DEFINED
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
     var VoiceOver = function() {
+        this.alwaysMode = false;
         this.whiteList = [
             "chrome://",
             "taobao.com", "tmall.com", "jd.com", "yinyuetai.com",
@@ -5747,11 +5748,22 @@ Object.preventExtensions(UsageMetricsManager);
     /**
      * Triggered when page dom loaded, start to convert page to simple format.
      *
+     * <pre>
+     * Notes:
+     *     1. readyListener will only handle DOM ready events, and only when always mode enabled
+     *     2. request must be {action: "convert"}
+     *     3. current tab must be an valid page tab
+     *     4. current tab url must not be in the white list, white list sites will not be converted automatically
+     * </pre>
+     *
      * @param {Object} request json request message
      * @param {Object} sender http://developer.chrome.com/extensions/runtime.html#type-MessageSender
      * @param {Function} sendResponse
      */
     VoiceOver.prototype.readyListener = function(request, sender, sendResponse) {
+        if (!this.alwaysMode) {
+            return; // always mode not enabled
+        }
         if (!(request.hasOwnProperty("action") && request.action == "convert")) {
             VoiceOver.log('[backend] readyListener: request format invalid!');
             return; // request not defined by "VoiceOver", skip it
@@ -5802,6 +5814,11 @@ Object.preventExtensions(UsageMetricsManager);
      * Event lister of "content.js".
      */
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-        voiceover.readyListener(request, sender, sendResponse);
-        VoiceOver.log('[backend] readyListener registered!');
+        voiceover.readyListener(request, sender, sendResponse); // current only {action: "convert"} be handled
+    });
+
+    chrome.commands.onCommand.addListener(function(command) {
+        if (command === 'toggle-always-mode') {
+            this.alwaysMode = !this.alwaysMode; // reverse the always mode status
+        }
     });
