@@ -5736,7 +5736,6 @@ Object.preventExtensions(UsageMetricsManager);
     //-* SELF DEFINED
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
     var VoiceOver = function() {
-        this.alwaysMode = false;
         this.whiteList = [
             "chrome://",
             "taobao.com", "tmall.com", "jd.com", "yinyuetai.com",
@@ -5746,11 +5745,36 @@ Object.preventExtensions(UsageMetricsManager);
     };
 
     /**
+     * Get always mode status which is stored in "localStorage".
+     *
+     * @return {Boolean}
+     */
+    VoiceOver.prototype.getAlwaysMode = function() {
+        var status = false;
+        if (localStorage.hasOwnProperty('alwaysMode')) {
+            status = localStorage.alwaysMode;
+        }
+
+        return status;
+    };
+
+    /**
+     * Reverse always mode status, if it does not exists in "localStorage", set it to <code>true</code>.
+     */
+    VoiceOver.prototype.switchAlwaysMode = function() {
+        if (localStorage.hasOwnProperty('alwaysMode')) {
+            localStorage.alwaysMode = !localStorage.alwaysMode;
+        } else {
+            localStorage.alwaysMode = true;
+        }
+    };
+
+    /**
      * Triggered when page dom loaded, start to convert page to simple format.
      *
      * <pre>
      * Notes:
-     *     1. readyListener will only handle DOM ready events, and only when always mode enabled
+     *     1. readyListener will only handle DOM ready events, and only act when always mode enabled
      *     2. request must be {action: "convert"}
      *     3. current tab must be an valid page tab
      *     4. current tab url must not be in the white list, white list sites will not be converted automatically
@@ -5761,12 +5785,10 @@ Object.preventExtensions(UsageMetricsManager);
      * @param {Function} sendResponse
      */
     VoiceOver.prototype.readyListener = function(request, sender, sendResponse) {
-        if (!this.alwaysMode) {
+        if (!this.getAlwaysMode()) {
+            VoiceOver.log('[backend] always mode not enabled: ');
+            VoiceOver.log(this.getAlwaysMode());
             return; // always mode not enabled
-        }
-        if (!(request.hasOwnProperty("action") && request.action == "convert")) {
-            VoiceOver.log('[backend] readyListener: request format invalid!');
-            return; // request not defined by "VoiceOver", skip it
         }
         if (!sender.hasOwnProperty("tab")) {
             VoiceOver.log('[backend] readyListener: request not from a valid tab!');
@@ -5811,14 +5833,27 @@ Object.preventExtensions(UsageMetricsManager);
     var voiceover = new VoiceOver();
 
     /**
-     * Event lister of "content.js".
+     * Event listener of "chrome.runtime.onMessage" from "content.js".
      */
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-        voiceover.readyListener(request, sender, sendResponse); // current only {action: "convert"} be handled
+        if (request.hasOwnProperty("action") && request.action == "convert") {
+            voiceover.readyListener(request, sender, sendResponse); // current only {action: "convert"} be handled
+        } else {
+            VoiceOver.log('[backend] runtime message not supported: ');
+            VoiceOver.log(request);
+        }
     });
 
+    /**
+     * Event listener of "chrome.commands.onCommand" from chrome.
+     */
     chrome.commands.onCommand.addListener(function(command) {
-        if (command === 'toggle-always-mode') {
-            this.alwaysMode = !this.alwaysMode; // reverse the always mode status
+        if (typeof command === 'string' && command === 'toggle-always-mode') {
+            voiceover.switchAlwaysMode(); // reverse the always mode status
+            VoiceOver.log('[backend] command "toggle-always-mode": always mode status changed: ');
+            VoiceOver.log(voiceover.getAlwaysMode());
+        } else {
+            VoiceOver.log('[backend] command not supported: ');
+            VoiceOver.log(command);
         }
     });
