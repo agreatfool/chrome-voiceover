@@ -5740,33 +5740,66 @@ Object.preventExtensions(UsageMetricsManager);
             "chrome://",
             "taobao.com", "tmall.com", "jd.com", "yinyuetai.com",
             "xenojoshua.com", "weibo.com",
-            "stackoverflow.com"
+            "stackoverflow.com", "dict.cn"
         ];
     };
 
     /**
-     * Get always mode status which is stored in "localStorage".
+     * Send http get request.
      *
-     * @return {Boolean}
+     * @param {String} url
+     * @param {Function} callback
      */
-    VoiceOver.prototype.getAlwaysMode = function() {
-        var status = false;
-        if (localStorage.hasOwnProperty('alwaysMode')) {
-            status = localStorage.alwaysMode;
-        }
-
-        return status;
+    VoiceOver.prototype.getHttpReq = function(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    VoiceOver.log('http request succeeded: ' + xhr.responseText);
+                    if (typeof callback === 'function') {
+                        callback(xhr.responseText);
+                    }
+                } else {
+                    VoiceOver.log('http request failed');
+                    if (typeof callback === 'function') {
+                        callback(0);
+                    }
+                }
+            }
+        };
+        xhr.timeout = 1000; // 1 sec
+        xhr.ontimeout = function () {
+            VoiceOver.log('http request failed');
+            if (typeof callback === 'function') {
+                callback(0);
+            }
+        };
+        xhr.onerror = function () {
+            VoiceOver.log('http request failed: ' + xhr.status);
+            if (typeof callback === 'function') {
+                callback(0);
+            }
+        };
+        xhr.send();
     };
 
     /**
-     * Reverse always mode status, if it does not exists in "localStorage", set it to <code>true</code>.
+     * Get always mode status which is stored in "sessionStorage".
+     *
+     * @param {Function} callback
      */
-    VoiceOver.prototype.switchAlwaysMode = function() {
-        if (localStorage.hasOwnProperty('alwaysMode')) {
-            localStorage.alwaysMode = !localStorage.alwaysMode;
-        } else {
-            localStorage.alwaysMode = true;
-        }
+    VoiceOver.prototype.getAlwaysMode = function(callback) {
+        this.getHttpReq("http://localhost/voiceover.php", callback);
+    };
+
+    /**
+     * Reverse always mode status, if it does not exists in "sessionStorage", set it to <code>true</code>.
+     *
+     * @param {Function} callback
+     */
+    VoiceOver.prototype.switchAlwaysMode = function(callback) {
+        this.getHttpReq("http://localhost/voiceover.php?action=REVERSE", callback);
     };
 
     /**
@@ -5774,7 +5807,7 @@ Object.preventExtensions(UsageMetricsManager);
      *
      * <pre>
      * Notes:
-     *     1. readyListener will only handle DOM ready events, and only act when always mode enabled
+     *     1. domReadyListener will only handle DOM ready events, and only act when always mode enabled
      *     2. request must be {action: "convert"}
      *     3. current tab must be an valid page tab
      *     4. current tab url must not be in the white list, white list sites will not be converted automatically
@@ -5784,20 +5817,15 @@ Object.preventExtensions(UsageMetricsManager);
      * @param {Object} sender http://developer.chrome.com/extensions/runtime.html#type-MessageSender
      * @param {Function} sendResponse
      */
-    VoiceOver.prototype.readyListener = function(request, sender, sendResponse) {
-        if (!this.getAlwaysMode()) {
-            VoiceOver.log('[backend] always mode not enabled: ');
-            VoiceOver.log(this.getAlwaysMode());
-            return; // always mode not enabled
-        }
+    VoiceOver.prototype.domReadyListener = function(request, sender, sendResponse) {
         if (!sender.hasOwnProperty("tab")) {
-            VoiceOver.log('[backend] readyListener: request not from a valid tab!');
+            VoiceOver.log('[backend] domReadyListener: request not from a valid tab!');
             return; // request sender is an valid tab, skip it
         }
 
         for (var index in this.whiteList) {
             if (-1 !== sender.tab.url.indexOf(this.whiteList[index])) {
-                VoiceOver.log('[backend] readyListener: url in the white list, do not convert!');
+                VoiceOver.log('[backend] domReadyListener: url in the white list, do not convert!');
                 VoiceOver.log('[backend] url: ' + sender.tab.url + ' , matched: ' + this.whiteList[index]);
                 VoiceOver.log('[backend] white list:');
                 VoiceOver.log(this.whiteList);
@@ -5837,7 +5865,14 @@ Object.preventExtensions(UsageMetricsManager);
      */
     chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
         if (request.hasOwnProperty("action") && request.action == "convert") {
-            voiceover.readyListener(request, sender, sendResponse); // current only {action: "convert"} be handled
+            voiceover.getAlwaysMode(function(alwaysMode) {
+                alwaysMode = parseInt(alwaysMode);
+                if (!alwaysMode) {
+                    VoiceOver.log('[backend] always mode not enabled');
+                    return; // always mode not enabled
+                }
+                voiceover.domReadyListener(request, sender, sendResponse); // current only {action: "convert"} be handled
+            });
         } else {
             VoiceOver.log('[backend] runtime message not supported: ');
             VoiceOver.log(request);
@@ -5849,9 +5884,13 @@ Object.preventExtensions(UsageMetricsManager);
      */
     chrome.commands.onCommand.addListener(function(command) {
         if (typeof command === 'string' && command === 'toggle-always-mode') {
-            voiceover.switchAlwaysMode(); // reverse the always mode status
-            VoiceOver.log('[backend] command "toggle-always-mode": always mode status changed: ');
-            VoiceOver.log(voiceover.getAlwaysMode());
+            voiceover.switchAlwaysMode(function(alwaysMode) {
+                VoiceOver.log('[backend] command "toggle-always-mode": always mode status changed: ' + alwaysMode); // reverse the always mode status
+            });
+        } else if (typeof command === 'string' && command === 'toggle-original') {
+            chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+                chrome.tabs.update(tabs[0].id, {url: tabs[0].url});
+            });
         } else {
             VoiceOver.log('[backend] command not supported: ');
             VoiceOver.log(command);

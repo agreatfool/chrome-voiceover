@@ -1157,11 +1157,6 @@
     VoiceOver.prototype.finishConvert = function() {
         VoiceOver.log('page converted, continue...');
 
-        // TODO
-        // 后续还需要快捷键来开关页面转换功能，就不需要每次到插件页面进行调整了
-        // 和快捷键来进行单词的页面转换
-        // 和快捷键来显示原页面
-
         var self = this;
         var convertOutputRendering = true;
 
@@ -1176,6 +1171,8 @@
                 convertOutputRendering = false;
                 // convert done, mark status
                 self.converting = false;
+                // TODO replace page HTML with new page
+
                 // play finished audio
                 self.playAudio();
             }

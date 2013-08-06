@@ -32,7 +32,13 @@
             "suggested_key": {
                 "default": "Alt+Shift+L"
             },
-            "description": "Toggle VoiceOver always on"
+            "description": "Toggle VoiceOver, make it always convert the web page"
+        },
+        "toggle-original": {
+            "suggested_key": {
+                "default": "Alt+Shift+O"
+            },
+            "description": "Toggle VoiceOver, make it display the original web page "
         }
     },
     
