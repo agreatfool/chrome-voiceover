@@ -7,22 +7,8 @@
 
     "version": "0.0.1",
 
-    "icons": {
-        "16": "img/voicecall-16.png",
-        "48": "img/voicecall-48.png",
-        "128": "img/voicecall-128.png"
-    },
-
     "background": {
         "page": "background.html" 
-    },
-    
-    "browser_action": {
-        "default_icon": {
-            "19": "img/voicecall-19.png",
-            "38": "img/icon--19@2x.png"
-        },
-        "default_title": "voiceover"
     },
 
     "content_scripts": [
@@ -51,8 +37,24 @@
     },
     
     "permissions": [
-        "unlimitedStorage", "management", "contextMenus", "cookies", "tabs", "notifications", "http://*/*", "https://*/*"
+        "http://*/*", "https://*/*",
+        "unlimitedStorage", "management", "contextMenus",
+        "cookies", "storage", "tabs", "notifications"
     ],
+
+    "icons": {
+        "16": "img/voicecall-16.png",
+        "48": "img/voicecall-48.png",
+        "128": "img/voicecall-128.png"
+    },
+
+    "browser_action": {
+        "default_icon": {
+            "19": "img/voicecall-19.png",
+            "38": "img/icon--19@2x.png"
+        },
+        "default_title": "voiceover"
+    },
     
     "default_locale": "en",
 
