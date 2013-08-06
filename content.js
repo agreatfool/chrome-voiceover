@@ -1168,17 +1168,29 @@
         VoiceOver.log('page converted, continue...');
 
         // TODO
-        // 根据id为loading的div是否处于显示状态，来检查页面上的悦读内容是否准备完成
-        // 准备完成后，将页面置换，并播放音效
-        // TODO
         // 后续还需要快捷键来开关页面转换功能，就不需要每次到插件页面进行调整了
         // 和快捷键来进行单词的页面转换
         // 和快捷键来显示原页面
 
-        // convert done, mark status
-        this.converting = false;
-        // play finished audio
-        this.playAudio();
+        var self = this;
+        var convertOutputRendering = true;
+
+        var timer = setInterval(function() {
+            if (!convertOutputRendering) {
+                clearInterval(timer);
+                return;
+            }
+            var loading = $('#readable_iframe').contents().find('#loading');
+            if (loading.css('display') == 'none') {
+                // rendering done
+                convertOutputRendering = false;
+                // convert done, mark status
+                self.converting = false;
+                // play finished audio
+                self.playAudio();
+            }
+        }, 1000);
+    };
     };
 
     VoiceOver.log = function(msg) {
