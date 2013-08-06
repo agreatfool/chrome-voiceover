@@ -5737,11 +5737,10 @@ Object.preventExtensions(UsageMetricsManager);
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
     var VoiceOver = function() {
         this.whiteList = [
-            "chrome://",
             "taobao.com", "tmall.com", "jd.com", "yinyuetai.com",
             "xenojoshua.com", "weibo.com",
             "stackoverflow.com", "dict.cn"
-        ];
+        ]; // put just the domain into the list!
     };
 
     /**
