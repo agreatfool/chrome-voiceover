@@ -5776,7 +5776,8 @@ Object.preventExtensions(UsageMetricsManager);
     };
 
     /**
-     * Triggered when page convert done.
+     * Triggered when function "__readable_by_evernote.__common_launch()" done.
+     * Then notify "content.js".
      */
     VoiceOver.prototype.convertListener = function() {
         VoiceOver.log('[backend] convert done!');
@@ -5786,7 +5787,7 @@ Object.preventExtensions(UsageMetricsManager);
     };
 
     /**
-     * Send log message to front "content.js" to log.
+     * Send log message to "content.js", and it will be logged in console.
      * @param msg
      */
     VoiceOver.log = function(msg) {
