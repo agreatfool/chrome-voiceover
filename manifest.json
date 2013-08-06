@@ -13,8 +13,6 @@
         "128": "img/voicecall-128.png"
     },
 
-    "options_page": "options/options.html",
-
     "background": { 
         "page": "background.html" 
     },
