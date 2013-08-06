@@ -5891,7 +5891,7 @@ Object.preventExtensions(UsageMetricsManager);
     VoiceOver.prototype.convertListener = function() {
         VoiceOver.log('[backend] convert done!');
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {finished: true});
+            chrome.tabs.sendMessage(tabs[0].id, {action: "finished"});
         });
     };
 
@@ -5901,7 +5901,7 @@ Object.preventExtensions(UsageMetricsManager);
      */
     VoiceOver.log = function(msg) {
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {msg: msg});
+            chrome.tabs.sendMessage(tabs[0].id, {action: "log", msg: msg});
         });
     };
 
@@ -5932,9 +5932,14 @@ Object.preventExtensions(UsageMetricsManager);
     chrome.commands.onCommand.addListener(function(command) {
         if (typeof command === 'string' && command === 'toggle-always-mode') {
             voiceover.switchAlwaysMode(function(alwaysMode) {
-                VoiceOver.log('[backend] command "toggle-always-mode": always mode status changed: ' + alwaysMode); // reverse the always mode status
+                // reverse the always mode status
+                VoiceOver.log('[backend] command "toggle-always-mode": always mode status changed: ' + alwaysMode);
+                chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+                    chrome.tabs.sendMessage(tabs[0].id, {action: "audio"});
+                });
             });
         } else if (typeof command === 'string' && command === 'toggle-original') {
+            // display the original web page
             chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
                 chrome.tabs.update(tabs[0].id, {url: tabs[0].url});
             });
