@@ -1126,21 +1126,38 @@
     var VoiceOver = function() {
         this.converting = false;
         this.registerBackgroundMessage();
+        this.clearlyElementWhiteList = [
+            {tag: "dl",     id:  "__readable_extension_definitions"},
+            {tag: "script", src: "chrome-extension"},
+            {tag: "style",  id:  "readableCSS1"},
+            {tag: "iframe", id:  "readable_iframe"},
+            {tag: "style",  id:  "readableCSS2"},
+            {tag: "audio",  id:  "VoiceOverFinished"}
+        ];
     };
 
+    /**
+     * Event listener of "chrome.tabs.sendMessage" from "background_*.js".
+     */
     VoiceOver.prototype.registerBackgroundMessage = function() {
         var self = this;
         chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-            if (request.hasOwnProperty("msg")) {
-                // log message from background.js
+            if (request.hasOwnProperty("action") && 'log' === request.action) {
+                // log message from background_*.js
                 VoiceOver.log(request.msg);
-            } else if (request.hasOwnProperty("finished") && true === request.finished) {
+            } else if (request.hasOwnProperty("action") && 'finished' === request.action) {
                 // page convert finished
                 self.finishConvert();
+            } else if (request.hasOwnProperty("action") && 'audio' === request.action) {
+                // play audio
+                self.playAudio();
             }
         });
     };
 
+    /**
+     * Send message to inform "background_*.js" to convert page.
+     */
     VoiceOver.prototype.startConvert = function() {
         VoiceOver.log('start to send convert request!');
         var self = this;
@@ -1154,6 +1171,9 @@
         chrome.runtime.sendMessage({action: "convert"}, function(response) {});
     };
 
+    /**
+     * Page convert done, so do the works next.
+     */
     VoiceOver.prototype.finishConvert = function() {
         VoiceOver.log('page converted, continue...');
 
@@ -1165,32 +1185,95 @@
                 clearInterval(timer);
                 return;
             }
-            var loading = $('#readable_iframe').contents().find('#loading');
+            var iframe = $('#readable_iframe');
+            var loading = iframe.contents().find('#loading');
             if (loading.css('display') == 'none') {
                 // rendering done
                 convertOutputRendering = false;
                 // convert done, mark status
                 self.converting = false;
-                // TODO replace page HTML with new page
-
+                // replace page HTML with new page
+                self.filterBody();
+                self.filterClearly();
                 // play finished audio
                 self.playAudio();
             }
         }, 1000);
     };
 
+    /**
+     * Filter the web page body, only leave the clearly simplified web page contents.
+     */
+    VoiceOver.prototype.filterBody = function() {
+        VoiceOver.log('start to filter body...');
+
+        var self = this;
+        var body = $('body').contents();
+        body.each(function() {
+            var element = $(this);
+            var matched = false;
+            for (index in self.clearlyElementWhiteList) {
+                // loop the filters
+                var filter = self.clearlyElementWhiteList[index]; // get the filter condition
+                // check tag
+                var tagCorrect = element.is(filter.tag);
+                // check second condition
+                var secondCond = false;
+                if (tagCorrect) {
+                    if (filter.hasOwnProperty('id') && element.attr('id') === filter.id) {
+                        // check id
+                        secondCond = true;
+                    } else if (filter.hasOwnProperty('src')) {
+                        // check src
+                        var elementSrc = element.attr('src');
+                        if (elementSrc && -1 !== elementSrc.indexOf(filter.src)) {
+                            secondCond = true;
+                        }
+                    }
+                }
+                if (tagCorrect && secondCond) { // all matched
+                    matched = true;
+                    break; // matched, so no need to check further filters
+                }
+            }
+            // not matched, remove the element
+            if (!matched) {
+                element.remove();
+            }
+        });
+
+        VoiceOver.log('body filtered...');
+    };
+
+    /**
+     * Filter the iframe content, remove unnecessary parts.
+     */
+    VoiceOver.prototype.filterClearly = function() {
+        // remove sidebar
+        var iframe = $('#readable_iframe');
+        iframe.contents().find('#sidebar').remove();
+    };
+
+    /**
+     * Play the convert finished audio.
+     */
     VoiceOver.prototype.playAudio = function() {
         if ($('#VoiceOverFinished').length == 0) {
             // audio element does not exists on page
             var audio = $('<audio id="VoiceOverFinished" src="" preload="true"></audio>');
             audio.attr('src', chrome.extension.getURL("sound/finished.mp3"));
             $('body').append(audio);
+            VoiceOver.log('audio resource attached!');
         }
         $('#VoiceOverFinished').get(0).play();
-
-        VoiceOver.log('audio resource attached!');
+        VoiceOver.log('finished audio playing!');
     };
 
+    /**
+     * Log message.
+     *
+     * @param msg
+     */
     VoiceOver.log = function(msg) {
         if (typeof msg != 'object' && typeof msg != 'function') {
             console.log('[VoiceOver] ' + msg);

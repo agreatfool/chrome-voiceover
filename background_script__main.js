@@ -5737,11 +5737,10 @@ Object.preventExtensions(UsageMetricsManager);
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
     var VoiceOver = function() {
         this.whiteList = [
-            "chrome://",
             "taobao.com", "tmall.com", "jd.com", "yinyuetai.com",
             "xenojoshua.com", "weibo.com",
             "stackoverflow.com", "dict.cn"
-        ];
+        ]; // put just the domain into the list!
     };
 
     /**
@@ -5803,6 +5802,53 @@ Object.preventExtensions(UsageMetricsManager);
     };
 
     /**
+     * Parse url string into parts.
+     *
+     * @param {String} url
+     * @returns {Object} parts
+     * <pre>
+     * {
+     *     domain: string, hash: string,
+     *     host: (*|string), hostname: (*|string),
+     *     href: (*|Function|string), origin: (*|string),
+     *     pathname: (*|string), port: (*|Function|string),
+     *     protocol: string, search: string, subdomain: string
+     * }
+     * </pre>
+     */
+    VoiceOver.prototype.parseURL = function(url) {
+        var a = document.createElement('a'), obj, i, j;
+        a.href = url;
+        obj = {
+            'domain': '',
+            'hash': a.hash.slice(1),
+            'host': a.host,
+            'hostname': a.hostname,
+            'href': a.href, // copy back from <a>
+            'origin': a.origin,
+            'pathname': a.pathname,
+            'port': a.port,
+            'protocol': a.protocol.slice(0, -1),
+            'search': a.search.slice(1),
+            'subdomain': ''
+        };
+        i = obj.hostname.lastIndexOf('.');
+        if (obj.hostname.length - i === 3) { // if .yz
+            j = obj.hostname.lastIndexOf('.', i-1);
+            if (j === i - 3 || j === i - 4) { // test .vwx.yz or .wx.yz
+                i = j;
+            }
+        }
+        j = obj.hostname.lastIndexOf('.', i-1);
+        if (j !== -1) { // move back one more .
+            i = j;
+        }
+        obj.domain = obj.hostname.slice(i+1);
+        obj.subdomain = obj.hostname.slice(0, i);
+        return obj;
+    };
+
+    /**
      * Triggered when page dom loaded, start to convert page to simple format.
      *
      * <pre>
@@ -5823,8 +5869,9 @@ Object.preventExtensions(UsageMetricsManager);
             return; // request sender is an valid tab, skip it
         }
 
+        var urlParts = this.parseURL(sender.tab.url);
         for (var index in this.whiteList) {
-            if (-1 !== sender.tab.url.indexOf(this.whiteList[index])) {
+            if (-1 !== urlParts.domain.indexOf(this.whiteList[index])) {
                 VoiceOver.log('[backend] domReadyListener: url in the white list, do not convert!');
                 VoiceOver.log('[backend] url: ' + sender.tab.url + ' , matched: ' + this.whiteList[index]);
                 VoiceOver.log('[backend] white list:');
@@ -5844,7 +5891,7 @@ Object.preventExtensions(UsageMetricsManager);
     VoiceOver.prototype.convertListener = function() {
         VoiceOver.log('[backend] convert done!');
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {finished: true});
+            chrome.tabs.sendMessage(tabs[0].id, {action: "finished"});
         });
     };
 
@@ -5854,7 +5901,7 @@ Object.preventExtensions(UsageMetricsManager);
      */
     VoiceOver.log = function(msg) {
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {msg: msg});
+            chrome.tabs.sendMessage(tabs[0].id, {action: "log", msg: msg});
         });
     };
 
@@ -5885,9 +5932,14 @@ Object.preventExtensions(UsageMetricsManager);
     chrome.commands.onCommand.addListener(function(command) {
         if (typeof command === 'string' && command === 'toggle-always-mode') {
             voiceover.switchAlwaysMode(function(alwaysMode) {
-                VoiceOver.log('[backend] command "toggle-always-mode": always mode status changed: ' + alwaysMode); // reverse the always mode status
+                // reverse the always mode status
+                VoiceOver.log('[backend] command "toggle-always-mode": always mode status changed: ' + alwaysMode);
+                chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+                    chrome.tabs.sendMessage(tabs[0].id, {action: "audio"});
+                });
             });
         } else if (typeof command === 'string' && command === 'toggle-original') {
+            // display the original web page
             chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
                 chrome.tabs.update(tabs[0].id, {url: tabs[0].url});
             });
