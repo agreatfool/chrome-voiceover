@@ -26,6 +26,13 @@ Find the php script reqeust url definition in `background_script__main.js:VoiceO
 ### White List
 You may want to skip several sites not converted automatically. You can put them in the white list defined in file `background_script__main.js:VoiceOver:whiteList`. Please note, just put the domains in the list.
 
+### Installation
+* Clone the code to your disk.
+* Open your chrome extension page: [chrome://extensions/](chrome://extensions/).
+* Enable the chrome extension dev mode.
+* Click the "load unpacked …" button, and direct it to the codes you checked out.
+* Done.
+
 ### Note
 This chrome extension is made base on the chrome extension: evernote clearly.
 Please see [chrome web store](https://chrome.google.com/webstore/detail/clearly/iooicodkiihhpojmmeghjclgihfjdjhj).
