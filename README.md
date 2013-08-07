@@ -50,6 +50,6 @@ new added contents:
 * img/voicecall-128.png
 
 ### Contact Me
-gmail: [nightghost5078@gmail.com](nightghost5078@gmail.com)
-weibo: [http://weibo.com/xenojoshua](http://weibo.com/xenojoshua)
-site: [http://xenojoshua.com](http://xenojoshua.com)
+* gmail: [nightghost5078@gmail.com](nightghost5078@gmail.com)
+* weibo: [http://weibo.com/xenojoshua](http://weibo.com/xenojoshua)
+* site: [http://xenojoshua.com](http://xenojoshua.com)
