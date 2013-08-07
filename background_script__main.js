@@ -5736,6 +5736,7 @@ Object.preventExtensions(UsageMetricsManager);
     //-* SELF DEFINED
     //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
     var VoiceOver = function() {
+        this.phpScript = "http://localhost/voiceover.php";
         this.whiteList = [
             "taobao.com", "tmall.com", "jd.com", "yinyuetai.com",
             "xenojoshua.com", "weibo.com",
@@ -5789,7 +5790,7 @@ Object.preventExtensions(UsageMetricsManager);
      * @param {Function} callback
      */
     VoiceOver.prototype.getAlwaysMode = function(callback) {
-        this.getHttpReq("http://localhost/voiceover.php", callback);
+        this.getHttpReq(this.phpScript, callback);
     };
 
     /**
@@ -5798,7 +5799,7 @@ Object.preventExtensions(UsageMetricsManager);
      * @param {Function} callback
      */
     VoiceOver.prototype.switchAlwaysMode = function(callback) {
-        this.getHttpReq("http://localhost/voiceover.php?action=REVERSE", callback);
+        this.getHttpReq(this.phpScript + "?action=REVERSE", callback);
     };
 
     /**
